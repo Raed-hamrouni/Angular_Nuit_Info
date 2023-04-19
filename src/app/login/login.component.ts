@@ -70,22 +70,22 @@ get password() { return this.loginForm.get('password') }
 login() {
   this.adminServ.login(this.loginForm.value).subscribe((res:any)=> {
     console.log("hello",res);
-    if(res.admin.role=="entreprise"){
+    if(res.admin.role=="responsable"){
       this.authServ.Login(res.admin,res.token);
     localStorage.setItem('CurrentUser', res.admin._id)
-    this.router.navigate(["/dashboard-entreprise"]);
+    this.router.navigate(["/espaceResponsable"]);
 
     }
     
     //////admin
     if (res.admin.role=="Admin"){
-    this.router.navigate(["/dashboard-admin"]);
+    this.router.navigate(["/espaceAdmin"]);
 
     this.authServ.Login(res.admin.role,res.token);
     localStorage.setItem('CurrentUser', res.admin._id)}
     /////adherent
     else if (res.admin.role=="Adherent"){
-    this.router.navigate(["/dashboard-adherents"]);
+    this.router.navigate(["/espaceMembre"]);
 
     this.authServ.Login(res.admin.role,res.token);
     localStorage.setItem('CurrentUser', res.admin._id)}
@@ -96,15 +96,10 @@ login() {
 
     this.authServ.Login(res.admin.role,res.token);
     localStorage.setItem('CurrentUser', res.admin._id)}
-    else { this.router.navigate(["/dashboard-entreprise"]);
+    else { this.router.navigate(["/espaceResponsable"]);
     this.authServ.Login(res.admin,res.token);
     localStorage.setItem('CurrentUser', res.admin._id)}
-    
-    //if (res.admin.role=="RH")
-    //this.router.navigate(["/acceuil"]);
-
-    //this.authServ.Login(res.admin.role,res.token);
-    //localStorage.setItem('CurrentUser', res.admin._id)
+   
   }, err=> {
     console.log("Invalid password or Email");
     // this.loginResponse=this.opensweetalert();
