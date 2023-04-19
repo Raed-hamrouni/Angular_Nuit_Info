@@ -16,17 +16,6 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
 <body>
 <header>
 
-	<nav id="nav" class="navbar navbar-expand-md navbar-light navbar-laravel fixed-nav">
-			<div class="container">
-                <div class="navbar-header">
-				
-					<div class="nav-collapse">
-						<span></span>
-					</div>	
-				</div>
-					
-     </div>
-		</nav>
 </header>
     <div class="basiccontent">
         <div class="container">
@@ -34,19 +23,13 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
 
         <div style="margin-top:15px;" class="section-header text-center">
            
-            <h2 style="margin-top:20px; margin-left: -90px;" class="title">Devenir Membre</h2>
+            <h2 style="margin-top:-20px; margin-left: -90px;" class="title">Devenir Membre</h2>
          
         </div>
 
-        <div class="col-md-12">
-           
-            <h3 style="margin-left: 90px; margin-top: -20px;">L’association ouvre l’inscription à toute personne intéressée par l’ingénierie,<br>  </h3>
-                <h3 style="margin-left: 200px;" > recherche scientifique ou l’innovation technologique.</h3>
-           
-        </div>
        <div class="col-md-11" style="width: 1100px;">
             <div class="panel panel-default">
-                <div class="panel-heading" style="color:  #25857e; font-size: 16px;" ><strong>Formulaire d'Adhésion :</strong>   </div>
+                <div class="panel-heading" style="color:  #34a5da; font-size: 16px;" ><strong>Formulaire d'Adhésion :</strong>   </div>
                 <div class="panel-body">
                     <form [formGroup]="adherentForm" >
                         <input type="hidden" name="_token" >
@@ -70,21 +53,7 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                                 
 
                             </div>
-                            <div  style="margin-top:15px;"class="col-md-6">
-
-                                <div class="form-group">
-                                    <label class="control-label">CIN (*) :</label>
-
-                                    <input type="text" pattern="[0-9]{8}" name="CIN" id="CIN" class="form-control col-md-12" style="height: 35px;" 
-                                    formControlName="CIN" placeholder="Entrez Votre N° CIN"
-                                    [ngClass]="{'is-invalid':adherentForm.get('CIN')!.touched && !adherentForm.get('CIN')!.valid}">
-                                    
-                                    
-                                
-                                </div>
-                                
-
-                            </div>
+                           
                             <div style="margin-top:15px;" class="col-md-6">
 
                                 <div class="form-group">
@@ -113,6 +82,19 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
 
                             <div style="margin-top:15px;" class="col-md-6">
 
+                             
+                                <div class="form-group">
+                                    <label class="control-label">Téléphone (*) :</label>
+
+                                    <input  name="telephone" type="text" pattern="[0-9]{8}" class="form-control" placeholder="Entrez Votre Numéro"
+                                    formControlName="telephone" 
+                                    [ngClass]="{'is-invalid':adherentForm.get('telephone')!.touched && !adherentForm.get('telephone')!.valid}"
+                                    >
+                                </div>
+
+                            </div>
+                            <div style="margin-top:15px;" class="col-md-6">
+
                                 <div class="form-group">
                                     <label for="email" class="control-label">Adresse E-mail (*) :</label>
 
@@ -126,20 +108,6 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                             <div style="margin-top:15px;" class="col-md-6">
 
                                 <div class="form-group">
-                                    <label class="control-label">Téléphone (*) :</label>
-
-                                    <input  name="telephone" type="text" pattern="[0-9]{8}" class="form-control" placeholder="Entrez Votre Numéro"
-                                    formControlName="telephone" 
-                                    [ngClass]="{'is-invalid':adherentForm.get('telephone')!.touched && !adherentForm.get('telephone')!.valid}"
-                                    >
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div style="margin-top:15px;" class="col-md-12">
-
-                                <div class="form-group">
                                     <label for="password" class="control-label">Mot de passe (*) :</label>
 
 
@@ -150,39 +118,14 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                                 </div>
 
                             </div>
-
-                            <div style="margin-top:15px;" class="col-md-6">
-
-                                <!-- <div class="form-group">
-                                    <label for="password-confirm" class="control-label">Confirmer le mot de passe (*): </label>
-                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" formControlName="password"
-                                    [ngClass]="{'is-invalid':adherentForm.get('password')!.touched && !adherentForm.get('password')!.valid}">
-
-                                </div> -->
-
-                            </div>
                         </div>
+                       
+                          
 
-                        <div style="margin-top:15px;" class="row">
-                            <div class="col-md-12">
+                           
+                        
 
-                                <div class="form-group">
-                                    <label class="control-label">Situation Professionnelle (*) :</label>
-
-                                    <select  name="profession" id="profession" class="form-control col-md-18" style="height: 35px;" 
-                                    formControlName="profession"  
-                                    [ngClass]="{'is-invalid':adherentForm.get('profession')!.touched && !adherentForm.get('profession')!.valid}">
-                                    
-                                    
-                                        <option value="Etudiant">Etudiant</option>
-                                        <option value="Ingenieur">Ingenieur</option>
-                                    </select>
-                                </div>
-
-
-                            </div>
-                            
-                        </div>
+                     
                         <div style="margin-top:15px;" class="studentsection">
 
                             <div class="row">
@@ -197,7 +140,7 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                                     <option value="Licence">Licence</option>
                                     <option value="Mastére">Mastére</option>
                                     <option value="Ingénierie">Ingénierie</option>
-                                    <option value="Préparatoire">Préparatoire</option>
+                                    
                                         </select>
                                 </div>
 
@@ -214,8 +157,7 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                                     <option value="1er Année ">1ér Année</option>
                                     <option value="2éme Année">2éme Année</option>
                                     <option value="3éme Année">3éme Année</option>
-                                    <option value="4éme Année">4éme Année</option>
-                                    <option value="5éme Année">5éme Année</option>
+                        
                                 
                                 </select>
                                 </div>
@@ -229,28 +171,36 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                                     <div class="form-group">
                                         <label class="control-label">Spécialité (*) :</label>
 
-                                        <input id="specialite" name="specialite" type="text" class="form-control" placeholder=""
+                                        <select id="specialite" name="specialite" type="text" class="form-control" placeholder=""
                                         formControlName="specialite"  placeholder="Entrez Votre Spécialité"
                                     [ngClass]="{'is-invalid':adherentForm.get('specialite')!.touched && !adherentForm.get('specialite')!.valid}">
-                                    </div>
+                                    <option value="Licence LM">Licence LM</option>
+                                    <option value="Licence IOT">Licence IOT</option>
+                                    <option value="Licence LT">Licence LT</option>
+                                    <option value="SWM ">SWM</option>
+                                    <option value="SSR">SSR</option>
+                                    <option value="MR">MR</option>
+                                    <option value="DNI">DNI</option>
+                                </select>
+                                </div>
 
                                 </div>
 
                                 <div class="col-md-6">
 
                                     <div class="form-group">
-                                        <label class="control-label">Etablissement (*) :</label>
+                                        <label class="control-label">Clubs (*) :</label>
 
-                                        <select  name="etablissement" id="etablissement" class="form-control col-md-12" style="height: 39px;" formControlName="etablissement"
-                                       placeholder="Choisir Votre Etablissement" 
-                                       [ngClass]="{'is-invalid':adherentForm.get('etablissement')!.touched && !adherentForm.get('etablissement')!.valid}">
-                                        <option value="ISITCOM">IsitCom</option>
-                                        <option value="ISSAT">Issat</option>
-                                        <option value="ENISO">Eniso</option>
-                                        <option value="ISET">Iset</option>
-                                        <option value="ESSTHS">Essths</option>
-                                        <option value="EPI">EPI</option>
-                                        <option value="POLYTECHNIQUE">Polytechnique</option>
+                                        <select  name="club" id="club" class="form-control col-md-12" style="height: 39px;" formControlName="club"
+                                       placeholder="Choisir Votre Club" 
+                                       [ngClass]="{'is-invalid':adherentForm.get('club')!.touched && !adherentForm.get('club')!.valid}">
+                                        <option value="Arsii">Arsii</option>
+                                        <option value="Securinets">Securinets</option>
+                                        <option value="Enactus">Enactus</option>
+                                        <option value="Tunivisions">Tunivisions</option>
+                                        <option value="Atast">Atast</option>
+                                        <option value="3Zero">3Zero</option>
+                                        <option value="Croissant Rouge">Croissant Rouge</option>
                                       
                                         
                                     </select>

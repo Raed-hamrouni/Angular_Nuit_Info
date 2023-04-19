@@ -18,16 +18,14 @@ export class InscriptionComponent implements OnInit {
       {
         email:['',Validators.required],
         password:['',Validators.required],
-        CIN:['',Validators.required],
         nom:['',Validators.required],
         prenom:['',Validators.required],  
         civilite:['',Validators.required],
         niveau:['',Validators.required],
-        profession:['',Validators.required],
         cycle:['',Validators.required],
-        etablissement:['',Validators.required],
         telephone:['',Validators.required],
         specialite:['',Validators.required],
+        club:['',Validators.required],
         file:[''],
       }
 
