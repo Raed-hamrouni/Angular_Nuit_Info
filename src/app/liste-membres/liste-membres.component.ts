@@ -6,7 +6,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Adhérent } from '../Model/adhérent';
 import Swal from 'sweetalert2';
-// import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -82,7 +81,15 @@ export class ListeMembresComponent implements OnInit {
     },
     )
   }
-
+  // open(content:any) {
+  //   this.affiche()
+  //   this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+  //     this.closeResult = `Closed with: ${result}`;
+  //   }, (reason) => {
+  //     this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+  //   });
+  // }
+ 
   update(){
       
     this.adhServ.updateAdherent(this.id,this.Adherent).subscribe( data => {
@@ -105,7 +112,7 @@ export class ListeMembresComponent implements OnInit {
       icon: 'success',
       title: 'Adhérent Supprimé avec Succès',
       showConfirmButton: false,
-      timer: 2000
+      timer: 3000
     })
   }
  

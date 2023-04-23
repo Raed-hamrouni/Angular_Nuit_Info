@@ -26,7 +26,7 @@
             </a>
         </li> 
         <li class="active">
-            <a  href="dashboard-entreprise">
+            <a  href="espaceResponsable">
                 <i class="fa fa-wrench"></i>
                 <span class="title">Tableau de bord</span>
             </a>
@@ -34,7 +34,7 @@
   
   
         <li class="active">
-          <a  href="liste">
+          <a  href="listeMembre">
               <i class="fa fa-list"></i>
               <span class="title">liste des Adhérents</span>
           </a>
@@ -47,17 +47,15 @@
     </li>
         
         
-          <li class="active" >
-            <a href="javascript:;">
-              <i class="fa fa-user" aria-hidden="true"></i>
-              <span [routerLink]="['/profil-entreprise',id]">Mon Profil
-              </span>
-              <span class="title"></span></a>
-      
-          </li> 
+    <li class="active">
+      <a  href="profilClub">
+        <i class="fa fa-user" aria-hidden="true"></i>
+          <span class="title"> Mon profil</span>
+      </a>
+  </li>
         
           <li class="">
-            <a  >
+            <a (click)="logout()" >
                 <i class="fa fa-arrow-left"></i>
                 <span class="title">Déconnexion</span></a>
       

@@ -23,6 +23,7 @@ import { ProfilMembreComponent } from './profil-membre/profil-membre.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +50,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ReactiveFormsModule,
     FormsModule,
     NgxPaginationModule,
+  
 
   ],
   providers: [],

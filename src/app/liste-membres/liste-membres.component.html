@@ -88,7 +88,7 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let Adherents of Adherent  | paginate : {itemsPerPage: 2, currentPage: p} " >
-                          <img src="http://localhost:3000/{{Adherents.file}}" alt="user" width="70" style="margin-left: 90px;" class="img-circle">
+                          <img src="http://localhost:3000/{{Adherents.file.substring(12)}}" alt="user" width="70" style="margin-left: 90px;" class="img-circle">
                             <td>{{Adherents.nom }} </td>
                             <td>{{Adherents.prenom}}</td>
                             
@@ -103,16 +103,11 @@
                               </button>
                              
                               <button class="action-button btn-secondary" [routerLink]="['/update',Adherents._id]"> <span class="fa fa-edit"></span></button>
-                              <button class="action-button btn-danger" [routerLink]="['/delete',Adherents._id]"> <span class="fa fa-trash"></span></button>  
+                              <button  class="action-button btn-danger" type="button" (click)="delete(Adherents.id);opensweetalert2()" > 
+                                <span class="fa fa-trash"></span>
+                              </button>
+                                
 
-                      <!-- <button  mat-raised-button  mwlConfirmationPopover
-                      [popoverTitle]="popoverTitle"
-                      [popoverMessage]="popoverMessage"
-                      placement="left"
-                      (confirm)="delete(Adherents.id);opensweetalert2()"
-                      (cancel)="cancelClicked = true" class="action-button btn-danger" > 
-                      <span class="fa fa-trash"></span>
-                    </button> -->
                             </div>
                             
                             </td> 
