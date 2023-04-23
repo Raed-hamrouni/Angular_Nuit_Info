@@ -13,6 +13,11 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { SidebarAdminComponent } from './sidebar-admin/sidebar-admin.component';
+import { SidebarResponsableComponent } from './sidebar-responsable/sidebar-responsable.component';
+import { SidebarMembreComponent } from './sidebar-membre/sidebar-membre.component';
+import { NavbarSuppComponent } from './navbar-supp/navbar-supp.component';
+import { ProfilClubComponent } from './profil-club/profil-club.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +30,11 @@ import { FooterComponent } from './footer/footer.component';
     NavbarComponent,
     FooterComponent,
     InscriptionComponent,
+    SidebarAdminComponent,
+    SidebarResponsableComponent,
+    SidebarMembreComponent,
+    NavbarSuppComponent,
+    ProfilClubComponent,
   ],
   imports: [
     BrowserModule,

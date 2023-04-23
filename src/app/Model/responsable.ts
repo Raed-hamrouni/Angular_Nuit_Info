@@ -1,6 +1,6 @@
 export interface Responsable {
     id:number;
-    nomEnt:string;
+    nomClub:string;
     nomResp:string;
     emailEnt:string;
     password:string;

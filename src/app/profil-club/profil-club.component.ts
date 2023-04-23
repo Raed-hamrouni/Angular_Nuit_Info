@@ -5,16 +5,15 @@ import { AdminService } from '../shared/admin.service';
 import { AuthService } from '../shared/auth.service';
 import { AdherentService } from '../shared/adherent.service';
 import { ResponsableService } from '../shared/responsable.service';
-
 @Component({
-  selector: 'app-dashboard-responsable',
-  templateUrl: './dashboard-responsable.component.html',
-  styleUrls: ['./dashboard-responsable.component.css']
+  selector: 'app-profil-club',
+  templateUrl: './profil-club.component.html',
+  styleUrls: ['./profil-club.component.css']
 })
-export class DashboardResponsableComponent implements OnInit {
-
-  id:any;
+export class ProfilClubComponent implements OnInit {
   Responsable!: any;
+  id:any;
+
   constructor(
     private router:Router, 
     private fb: FormBuilder,
@@ -31,8 +30,5 @@ export class DashboardResponsableComponent implements OnInit {
       this.Responsable = data;
     })
   }
-  logout(){
-    this.authServ.logout()
-  }
-}
 
+}

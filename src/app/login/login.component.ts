@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private adminServ: AdminService,
     private authServ: AuthService,
-    private entrepriseServ:ResponsableService,) { 
+    private ResponsableService:ResponsableService,) { 
 // this.loginForm = this.fb.group({
 //         email: [
 //           "",
