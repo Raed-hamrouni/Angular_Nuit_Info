@@ -29,6 +29,10 @@ export class AdherentService {
   getAdherent(id: number) {
     return this.http.get(this.path+"/"+ id);
   }
+  uploadFile(data:any) {
+    return this.http.post(this.path+"/upload",data) 
+   
+   }
 
 
 

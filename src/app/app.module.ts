@@ -18,6 +18,10 @@ import { SidebarResponsableComponent } from './sidebar-responsable/sidebar-respo
 import { SidebarMembreComponent } from './sidebar-membre/sidebar-membre.component';
 import { NavbarSuppComponent } from './navbar-supp/navbar-supp.component';
 import { ProfilClubComponent } from './profil-club/profil-club.component';
+import { ListeMembresComponent } from './liste-membres/liste-membres.component';
+import { ProfilMembreComponent } from './profil-membre/profil-membre.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 
 @NgModule({
   declarations: [
@@ -35,6 +39,8 @@ import { ProfilClubComponent } from './profil-club/profil-club.component';
     SidebarMembreComponent,
     NavbarSuppComponent,
     ProfilClubComponent,
+    ListeMembresComponent,
+    ProfilMembreComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +48,8 @@ import { ProfilClubComponent } from './profil-club/profil-club.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    NgxPaginationModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
