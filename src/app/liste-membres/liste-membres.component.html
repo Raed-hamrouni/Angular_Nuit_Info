@@ -87,7 +87,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let Adherents of Adherent  | paginate : {itemsPerPage: 2, currentPage: p} " >
+                        <tr *ngFor="let Adherents of Adherent  | paginate : {itemsPerPage: 2, currentPage: p}" >
                           <img src="http://localhost:3000/{{Adherents.file.substring(12)}}" alt="user" width="70" style="margin-left: 90px;" class="img-circle">
                             <td>{{Adherents.nom }} </td>
                             <td>{{Adherents.prenom}}</td>

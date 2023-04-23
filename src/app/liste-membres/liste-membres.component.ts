@@ -4,9 +4,13 @@ import { AuthService } from '../shared/auth.service';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Adhérent } from '../Model/adhérent';
 import Swal from 'sweetalert2';
-
+interface Adhérent {
+  id:number;
+  nom:string;
+  prenom:string;
+  email:string;
+}
 
 @Component({
   selector: 'app-liste-membres',
@@ -72,7 +76,8 @@ export class ListeMembresComponent implements OnInit {
     )
   }
 
-  
+ 
+
   delete(id:any){
     this.adhServ.deleteAdherent(id).subscribe( data => {    
     this.affiche()
