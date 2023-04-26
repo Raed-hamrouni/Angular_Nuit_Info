@@ -24,6 +24,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { ReservationSalleComponent } from './reservation-salle/reservation-salle.component';
 import { InscriptionResponsableComponent } from './inscription-responsable/inscription-responsable.component';
 import { ListeAutresComponent } from './liste-autres/liste-autres.component';
+import { InfoMembreComponent } from './info-membre/info-membre.component';
+import { UpdateAdherentComponent } from './update-adherent/update-adherent.component';
 
 
 
@@ -48,6 +50,8 @@ import { ListeAutresComponent } from './liste-autres/liste-autres.component';
     ReservationSalleComponent,
     InscriptionResponsableComponent,
     ListeAutresComponent,
+    InfoMembreComponent,
+    UpdateAdherentComponent,
   ],
   imports: [
     BrowserModule,

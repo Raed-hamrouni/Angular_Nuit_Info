@@ -1,0 +1,62 @@
+<app-navbar-supp></app-navbar-supp>
+<app-sidebar-membre></app-sidebar-membre>
+
+
+        <div class="wrapper" style="margin-top: 50px; margin-left: -110px;">
+          <div class="left"> 
+            <img src="http://localhost:3000/{{Adherent.file.substring(12)}}"  width="150" class="">
+            <br>
+            <br>
+            <h4>{{Adherent.nom}} {{Adherent.prenom}} </h4>
+            <h2>{{Adherent.club}}</h2>
+        
+          </div>
+                
+          <div class="right">
+        
+            <div class="info">
+                  <h3>Informations de Contact :</h3>
+              <div class="info_data">
+               
+                    <div class="data">
+                      <h4>Email</h4>
+                      <p> {{Adherent.email}}</p>
+                  </div>
+                 
+                <div class="data">
+                  <h4>N° Téléphone</h4>
+                  <p> {{Adherent.telephone}}</p>
+              </div>
+
+            </div>
+          </div>
+                  
+          <div class="projects">
+        
+              <h3>Informations Professionnelles :</h3>
+              <div class="info_data">
+                <div class="data">
+                  <h4>Etablissement</h4>
+                  <p>ISITCOM</p>
+                </div>
+                <div class="data">
+                  <h4>Cycle d'étude </h4>
+                  <p> {{Adherent.cycle}}</p>
+                </div>
+                <div class="data">
+                  <h4>Spécialité d'étude</h4>
+                  <p> {{Adherent.specialite}}</p>
+                </div>
+            </div>
+              <div class="data">
+                <h4>Niveau d'étude</h4>
+                <p> {{Adherent.niveau}}</p>
+              </div>
+            </div>
+            
+          </div>
+        
+          
+        
+        </div>
+   

@@ -1,1 +1,126 @@
-<p>dashboard-membre works!</p>
+<html lang="en" style="height: auto;"><head>
+    <meta charset="utf-8">
+<title>
+    ARSII - Espace membre</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<link href="https://arsii.org/adminlte/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://arsii.org/adminlte/css/AdminLTE.min.css" rel="stylesheet">
+<link href="https://arsii.org/adminlte/css/custom.css" rel="stylesheet">
+<link href="https://arsii.org/adminlte/css/skins/skin-green.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/select/1.2.0/css/select.dataTables.min.css">
+<link rel="stylesheet" href="//cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
+
+<link href="https://arsii.org/adminlte/plugins/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+</head>
+
+
+<body class="skin-green sidebar-mini" style="height: auto;">
+
+<div id="wrapper">
+
+<app-navbar-supp></app-navbar-supp>
+
+<aside class="main-sidebar">
+
+    <section class="sidebar" style="height: auto; margin-top: -40px;">
+        <ul class="sidebar-menu">
+
+            <span class="d-flex flex-column align-items-center text-center">
+     
+                <img style="width: 100px;height: auto;margin-top: 0px;" class="rounded-circle" src="http://localhost:3000/{{Adherent.file.substring(12)}}" alt="logo">
+                <h4>{{Adherent.nom}} {{Adherent.prenom}} </h4>
+          </span>
+             <li class="">
+                <a href="#acceuil">
+                    <i class="fa fa-globe"></i>
+                    <span class="title">Retourner au Site</span>
+                </a>
+            </li>
+            
+   
+            <li class="treeview active">
+                <a href="">
+                    <i class="fa fa-slideshare"></i>
+                    <span>Espace Membre</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                   
+                    <li>
+                        <a href="infoMembre">
+                            <i class="fa fa-user"></i>
+                            <span>Mon profil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="modifierProfil">
+                            <i class="fa fa-edit"></i>
+                            <span>Modifier profil</span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="formation-adherent">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <span> Plan des Formations</span>
+                        </a>
+                    </li>
+                   
+                    
+            
+                </ul>
+            </li>
+            
+                        <li class="">
+                <a  (click)="logout()" >
+                    <i class="fa fa-arrow-left"></i>
+                    <span class="title">Déconnexion</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    
+</aside>
+    <div class="content-wrapper" style="min-height: 575px;">
+        <section class="content">
+            
+            <div class="row">
+                <div class="col-md-12">
+
+                                        
+                        <div class="row">
+        <div class="col-md-12" style="margin-top: 63px;">
+            <div class="panel panel-default">
+                <div class="panel-heading">Bienvenue,  <strong>{{Adherent.nom}} {{Adherent.prenom}} </strong> dans votre espace interne.</div>
+
+                <div class="panel-body">
+                   
+                
+                </div>
+
+                
+            </div>
+
+        </div>
+    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+    
+  
+  
+</body>
+</html>
+

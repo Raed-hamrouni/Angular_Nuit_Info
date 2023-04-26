@@ -1,1 +1,112 @@
-<p>sidebar-membre works!</p>
+
+
+<div>
+    <section id="container">
+  
+  
+  <aside >
+    
+    <div id="sidebar" class="nav-collapse nicescroll-rails" tabindex="5000" style="overflow-y: scroll;  
+    outline: none; margin-left: 0px;
+    z-index: 1;
+    /* overflow-x: hidden; */
+    
+    " > 
+      
+      <!-- sidebar menu start-->
+      <ul class="sidebar-menu" id="nav-accordion">
+        <p class="centered"><a><img src="" class="img-circle" width="80" routerLink ="/profil"></a>
+          <a><img src="assets/img/entreprise.png" class="img-circle" width="110" style="margin-left: -10px;" routerLink ="/profil" ></a></p>
+        <!-- <h5 style="margin-left: 85px;"><h3> {{Entreprise.nomEnt}}</h3></h5> -->
+  
+         <li class="title">
+          <a routerLink ="/acceuil" >
+            <i class="fa fa-globe"></i>
+            <span>Retourner au Site</span>
+            </a>
+        </li> 
+        <li class="active">
+            <a  href="dashboard-entreprise">
+                <i class="fa fa-wrench"></i>
+                <span class="title">Tableau de bord</span>
+            </a>
+        </li>
+  
+  
+        <li class="active">
+          <a  href="liste">
+              <i class="fa fa-list"></i>
+              <span class="title">liste des Adhérents</span>
+          </a>
+      </li>
+      <li class="active">
+        <a  href="recherche">
+          <i class="fa fa-search" aria-hidden="true"></i>
+            <span class="title"> Profils Compétents</span>
+        </a>
+    </li>
+        
+        
+          <li class="active" >
+            <a href="javascript:;">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <span [routerLink]="['/profil-entreprise',id]">Mon Profil
+              </span>
+              <span class="title"></span></a>
+      
+          </li> 
+        
+          <li class="">
+            <a >
+                <i class="fa fa-arrow-left"></i>
+                <span class="title">Déconnexion</span></a>
+      
+          </li> 
+        
+      
+        
+        <mat-accordion class="sidebar" routerLinkActive = "active"  >
+        
+           
+   
+        </mat-accordion>
+  
+  
+        <mat-accordion class="sidebar" routerLinkActive = "active"  >
+        
+         
+        </mat-accordion>
+  
+        
+  
+       
+      
+  
+        <mat-accordion class="sidebar" routerLinkActive = "active"  >
+          
+        </mat-accordion>
+  
+        
+      </ul>
+      <!-- sidebar menu end-->
+    </div>
+  </aside>
+  <!--sidebar end-->
+  
+  <section id="main-content">
+    <section class="wrapper">
+  
+        <div class="container-fluid">
+          <router-outlet></router-outlet>
+        </div>
+      </section>
+      </section>
+  
+  </section>
+  
+  </div>
+  
+  <!-- /////////////////////////////////modal///////////////////////////////////////// -->
+
+
+  
