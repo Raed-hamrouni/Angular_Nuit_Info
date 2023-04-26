@@ -9,7 +9,7 @@
   <div id="sidebar" class="" tabindex="5000" style="background-color: #c4e1f7;"> 
     <ul class="sidebar-menu" id="nav-accordion">
       <p class="centered"><a><img src="" class="img-circle" width="80"></a>
-        <a><img src="" class="img-circle" width="110" style="margin-left: -10px;" ></a></p>
+        <a><img src="http://localhost:3000/{{Responsable.file.substring(12)}}" class="img-circle" width="150" style="margin-left: -10px; margin-top: -72px;" ></a></p>
        <li class="title">
         <a routerLink ="/acceuil" >
           <i class="fa fa-globe" style="color: black;"></i>
@@ -56,7 +56,7 @@
        
       
         <li class="">
-          <a >
+          <a (click)="logout()" >
               <i class="fa fa-arrow-left"  style="color: black;"></i>
               <span class="title" style="color: black;">Déconnexion</span></a>
     

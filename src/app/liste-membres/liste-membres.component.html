@@ -88,7 +88,7 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let Adherents of Adherent  | paginate : {itemsPerPage: 2, currentPage: p}" >
-                          <img src="http://localhost:3000/{{Adherents.file.substring(12)}}" alt="user" width="70" style="margin-left: 90px;" class="img-circle">
+                          <img src="http://localhost:3000/{{Adherents.file.substring(12)}}" width="110" style="margin-left: 90px;" class="circle">
                             <td>{{Adherents.nom }} </td>
                             <td>{{Adherents.prenom}}</td>
                             
@@ -118,7 +118,7 @@
                   </table>
 
 
-                  <div class="pagination" style="margin-top: 410px;">
+                  <div class="pagination" style="margin-top: 300px;">
 
                   <pagination-controls (pageChange)="p = $event"></pagination-controls>
                 </div>

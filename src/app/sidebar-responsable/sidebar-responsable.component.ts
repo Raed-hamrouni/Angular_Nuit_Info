@@ -12,7 +12,7 @@ import { AuthService } from '../shared/auth.service';
 export class SidebarResponsableComponent implements OnInit {
   id:any;
   closeResult = '';
-  Entreprise!:any;
+  Responsable!:any;
     constructor(
       private router:Router, 
       private fb: FormBuilder,
@@ -25,34 +25,15 @@ export class SidebarResponsableComponent implements OnInit {
     ngOnInit(): void  {
        
       this.id =(localStorage.getItem('CurrentUser') || '');
-      console.log("id entreprise ",this.id);
+      console.log("id Responsable ",this.id);
       
       
       this.responsableService.getResponsable(this.id).subscribe( data => {
         // console.log(data);  
-        this.Entreprise = data;
+        this.Responsable = data;
       })}
   
   
-  
-      // open(content:any) {
-      //   this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-      //     this.closeResult = `Closed with: ${result}`;
-      //   }, (reason) => {
-      //     this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-      //   });
-      // }
-    
-    
-      // private getDismissReason(reason: any): string {
-      //   if (reason === ModalDismissReasons.ESC) {
-      //     return 'by pressing ESC';
-      //   } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      //     return 'by clicking on a backdrop';
-      //   } else {
-      //     return `with: ${reason}`;
-      //   }
-      // }
     logout(){
       this.authServ.logout()
     }
