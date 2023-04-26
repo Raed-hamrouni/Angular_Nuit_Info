@@ -52,7 +52,7 @@ export class UpdateAdherentComponent implements OnInit {
       
     this.adhServ.updateAdherent(this.id,this.Adherent).subscribe( data => {
       // this.toastr.success("Adhérent Modifié avec succès")
-     this.router.navigate(['/info-adherent']);
+     this.router.navigate(['/infoMembre']);
     },(error)=>{
       console.log(error);
     });

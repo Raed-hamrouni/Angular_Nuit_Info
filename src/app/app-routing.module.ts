@@ -40,7 +40,7 @@ const routes: Routes = [
     { path:'reservation',component:ReservationSalleComponent},
     { path:'inscriptionResp',component:InscriptionResponsableComponent},
     { path:'listeAutresResp',component:ListeAutresComponent},
-    { path:'infoMembre',component:InfoMembreComponent},
+    { path:'infoMembre/:id',component:InfoMembreComponent},
     { path:'modifierProfil',component:UpdateAdherentComponent}
 
 

@@ -16,7 +16,7 @@
       <!-- sidebar menu start-->
       <ul class="sidebar-menu" id="nav-accordion">
         <p class="centered"><a><img src="" class="img-circle" width="80" routerLink ="/profil"></a>
-          <a><img src="assets/img/entreprise.png" class="img-circle" width="110" style="margin-left: -10px;" routerLink ="/profil" ></a></p>
+          <a><img src="" class="img-circle" width="110" style="margin-left: -10px;" routerLink ="/profil" ></a></p>
         <!-- <h5 style="margin-left: 85px;"><h3> {{Entreprise.nomEnt}}</h3></h5> -->
   
          <li class="title">
@@ -26,7 +26,7 @@
             </a>
         </li> 
         <li class="active">
-            <a  href="dashboard-entreprise">
+            <a  href="espaceMembre">
                 <i class="fa fa-wrench"></i>
                 <span class="title">Tableau de bord</span>
             </a>
@@ -34,23 +34,15 @@
   
   
         <li class="active">
-          <a  href="liste">
+          <a  href="plan">
               <i class="fa fa-list"></i>
-              <span class="title">liste des Adhérents</span>
+              <span class="title">Plan de Formation</span>
           </a>
       </li>
-      <li class="active">
-        <a  href="recherche">
-          <i class="fa fa-search" aria-hidden="true"></i>
-            <span class="title"> Profils Compétents</span>
-        </a>
-    </li>
-        
-        
           <li class="active" >
             <a href="javascript:;">
               <i class="fa fa-user" aria-hidden="true"></i>
-              <span [routerLink]="['/profil-entreprise',id]">Mon Profil
+              <span [routerLink]="['/infoMembre',id]">Mon Profil
               </span>
               <span class="title"></span></a>
       
