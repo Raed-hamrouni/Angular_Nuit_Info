@@ -6,22 +6,19 @@
   
   <aside >
     
-    <div id="sidebar" class="nav-collapse nicescroll-rails" tabindex="5000" style="overflow-y: scroll;  
-    " > 
+    <div id="sidebar" class="" tabindex="5000" style="background-color: #c4e1f7;"> 
       <ul class="sidebar-menu" id="nav-accordion">
         <p class="centered"><a><img src="" class="img-circle" width="80"></a>
           <a><img src="" class="img-circle" width="110" style="margin-left: -10px;" ></a></p>
-  
-  
          <li class="title">
           <a routerLink ="/acceuil" >
-            <i class="fa fa-globe"></i>
-            <span>Retourner au Site</span>
+            <i class="fa fa-globe" style="color: black;"></i>
+            <span style="color: black;">Retourner au Site</span>
             </a>
         </li> 
         <li class="active">
             <a  href="espaceMembre">
-                <i class="fa fa-wrench"></i>
+                <i class="fa fa-wrench" style="color: black;"></i>
                 <span class="title">Tableau de bord</span>
             </a>
         </li>
@@ -29,22 +26,22 @@
   
         <li class="active">
           <a  href="plan">
-              <i class="fa fa-list"></i>
+              <i class="fa fa-list" style="color: black;"></i>
               <span class="title">Plan de Formation</span>
           </a>
       </li>
           <li class="active" >
             <a href="javascript:;">
-              <i class="fa fa-user" aria-hidden="true"></i>
-              <span [routerLink]="['/infoMembre',id]">Mon Profil
+              <i class="fa fa-user" style="color: black;" aria-hidden="true"></i>
+              <span style="color: black;" [routerLink]="['/infoMembre',id]">Mon Profil
               </span>
               <span class="title"></span></a>
       
           </li> 
           <li class="active" >
             <a href="javascript:;">
-              <i class="fa fa-edit" aria-hidden="true"></i>
-              <span [routerLink]="['/modifierProfil']">Modifier Profil
+              <i class="fa fa-edit" style="color: black;" aria-hidden="true"></i>
+              <span style="color: black;" [routerLink]="['/modifierProfil']">Modifier Profil
               </span>
               <span class="title"></span></a>
       
@@ -53,33 +50,12 @@
           <li class="">
             <a >
                 <i class="fa fa-arrow-left"></i>
-                <span class="title">Déconnexion</span></a>
+                <span class="title" style="color: black;">Déconnexion</span></a>
       
           </li> 
         
       
-        
-        <mat-accordion class="sidebar" routerLinkActive = "active"  >
-        
-           
-   
-        </mat-accordion>
-  
-  
-        <mat-accordion class="sidebar" routerLinkActive = "active"  >
-        
-         
-        </mat-accordion>
-  
-        
-  
        
-      
-  
-        <mat-accordion class="sidebar" routerLinkActive = "active"  >
-          
-        </mat-accordion>
-  
         
       </ul>
 
@@ -88,7 +64,7 @@
 
   
   <section id="main-content">
-    <section class="wrapper">
+    <section class="wrapper" >
   
         <div class="container-fluid">
           <router-outlet></router-outlet>
