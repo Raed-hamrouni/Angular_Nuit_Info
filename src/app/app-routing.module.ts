@@ -16,6 +16,7 @@ import { ListeMembresComponent } from './liste-membres/liste-membres.component';
 import { ProfilMembreComponent } from './profil-membre/profil-membre.component';
 import { ReservationSalleComponent } from './reservation-salle/reservation-salle.component';
 import { InscriptionResponsableComponent } from './inscription-responsable/inscription-responsable.component';
+import { ListeAutresComponent } from './liste-autres/liste-autres.component';
 
 const routes: Routes = [
 
@@ -35,7 +36,8 @@ const routes: Routes = [
     { path:'listeMembre',component:ListeMembresComponent},
     { path:'profil-membre/:id',component:ProfilMembreComponent},
     { path:'reservation',component:ReservationSalleComponent},
-    { path:'inscriptionResp',component:InscriptionResponsableComponent}
+    { path:'inscriptionResp',component:InscriptionResponsableComponent},
+    { path:'listeAutresResp',component:ListeAutresComponent}
 
 
 

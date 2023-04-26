@@ -23,6 +23,7 @@ import { ProfilMembreComponent } from './profil-membre/profil-membre.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ReservationSalleComponent } from './reservation-salle/reservation-salle.component';
 import { InscriptionResponsableComponent } from './inscription-responsable/inscription-responsable.component';
+import { ListeAutresComponent } from './liste-autres/liste-autres.component';
 
 
 
@@ -46,6 +47,7 @@ import { InscriptionResponsableComponent } from './inscription-responsable/inscr
     ProfilMembreComponent,
     ReservationSalleComponent,
     InscriptionResponsableComponent,
+    ListeAutresComponent,
   ],
   imports: [
     BrowserModule,
