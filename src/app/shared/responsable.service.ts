@@ -23,4 +23,8 @@ export class ResponsableService {
   login(data:any){
     return this.http.post(this.path+"login",data)
   }
+  uploadFile(data:any) {
+    return this.http.post(this.path+"/upload",data) 
+   
+   }
 }

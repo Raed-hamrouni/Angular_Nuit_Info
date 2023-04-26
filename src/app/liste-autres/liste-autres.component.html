@@ -2,16 +2,17 @@
 <app-sidebar-responsable></app-sidebar-responsable>
 
   
-  <h3><i class="fa fa-angle-double-right" style="margin-left: 280px; margin-top: -2px;"></i> Liste Des responsables</h3>
-  <div _ngcontent-roy-c3="" class="card-body bg-light">
+  <h3 style="margin-top: -17px;"><i class="fa fa-angle-double-right" style="margin-left: 280px; margin-top: -2px;"></i> Liste Des Clubs</h3>
+  <div _ngcontent-roy-c3="">
            <div >
-                <input type="text" class="form-control" [(ngModel)]="term"   placeholder="Search"  style="height: 30px; width: 400px; margin-left: 280px; margin-top: 5px;" > 
+                <input type="text" class="form-control" [(ngModel)]="term"   placeholder="Search"  style="height: 30px; width: 400px; margin-left: 280px; margin-top: 25px;" > 
                   </div>
                         
              <table class="table table-striped" style="margin-top: 8%;" >
                   
                       <thead class="thead-inverse">
                         <tr>
+                          <th>Photo</th>
                           <th>Nom</th>
                           <th>Nom du Club </th>
                           <th>E-mail
@@ -24,9 +25,9 @@
                       </thead>
                       <tbody>
                           <tr *ngFor="let responsable of Responsable | paginate : {itemsPerPage: 3, currentPage: p} " >
-                           
-                              <td>{{responsable.nomR }} </td>
-                              <td>{{responsable.nomResp}}</td>
+                            <img src="http://localhost:3000/{{responsable.file.substring(12)}}" alt="user" width="90" style="margin-left: 90px;" class="img-circle">
+                              <td>{{responsable.nomR}} </td>
+                              <td>{{responsable.nomClub}}</td>
                               <td>{{responsable.emailEnt}}</td>
                               <td>{{responsable.telEnt}}</td>
                              
@@ -36,7 +37,7 @@
                     </table>
   
   
-                    <div class="pagination" style="margin-top: 410px;">
+                    <div class="pagination" style="margin-top: 350px;">
                     <pagination-controls (pageChange)="p = $event"></pagination-controls>
                   </div>
                   </div>

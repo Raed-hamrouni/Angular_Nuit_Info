@@ -31,6 +31,7 @@ export class InscriptionResponsableComponent implements OnInit {
         cycleR:['',Validators.required],
         niveauR:['',Validators.required],
         specialiteR:['',Validators.required],
+        file:['',Validators.required],
 
 
       }
@@ -45,7 +46,19 @@ export class InscriptionResponsableComponent implements OnInit {
     });
     console.log(this.responsableForm.value)
   }
- 
+
+  onUpload(event:any){
+    let fileClub: File
+    let fd = new FormData()
+    fileClub = <File> event.target.files[0];
+    fd.append('file',fileClub,fileClub.name)
+    this.ResponsableService.uploadFile(fd).subscribe((res: any) => {
+      console.log(res);
+      }, (err)=>{
+        console.log(err); 
+      })
+      }
+
   opensweetalert() {
     Swal.fire({
       position: 'top-end',

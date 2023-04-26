@@ -1,143 +1,89 @@
 
 
 <div>
-    <section id="container">
+  <section id="container">
+
+
+<aside >
   
-  
-  <aside >
-    
-    <div id="sidebar" class="nav-collapse nicescroll-rails" tabindex="5000" style="overflow-y: scroll;  
-    outline: none; margin-left: 0px;
-    z-index: 1;
-    /* overflow-x: hidden; */
-    
-    " > 
-      
-      <!-- sidebar menu start-->
-      <ul class="sidebar-menu" id="nav-accordion">
-        <p class="centered"><a><img src="" class="img-circle" width="80" routerLink ="/profil"></a>
-          <a><img src="assets/img/entreprise.png" class="img-circle" width="110" style="margin-left: -10px;" routerLink ="/profil" ></a></p>
-        <!-- <h5 style="margin-left: 85px;"><h3> {{Entreprise.nomEnt}}</h3></h5> -->
-  
-         <li class="title">
-          <a routerLink ="/acceuil" >
-            <i class="fa fa-globe"></i>
-            <span>Retourner au Site</span>
-            </a>
-        </li> 
-        <li class="active">
-            <a  href="espaceResponsable">
-                <i class="fa fa-wrench"></i>
-                <span class="title">Tableau de bord</span>
-            </a>
-        </li>
-  
-  
-        <li class="active">
-          <a  href="listeMembre">
-              <i class="fa fa-list"></i>
-              <span class="title">liste des Adhérents</span>
+  <div id="sidebar" class="" tabindex="5000" style="background-color: #c4e1f7;"> 
+    <ul class="sidebar-menu" id="nav-accordion">
+      <p class="centered"><a><img src="" class="img-circle" width="80"></a>
+        <a><img src="" class="img-circle" width="110" style="margin-left: -10px;" ></a></p>
+       <li class="title">
+        <a routerLink ="/acceuil" >
+          <i class="fa fa-globe" style="color: black;"></i>
+          <span style="color: black;">Retourner au Site</span>
+          </a>
+      </li> 
+      <li class="active">
+          <a  href="espaceResponsable">
+              <i class="fa fa-wrench" style="color: black;"></i>
+              <span  style="color: black;" class="title">Tableau de bord</span>
           </a>
       </li>
+
+      <li class="active">
+        <a  href="listeMembre">
+            <i class="fa fa-list"  style="color: black;"></i>
+            <span  style="color: black;" class="title">liste des Adhérents</span>
+        </a>
+    </li>
       <li class="active">
         <a  href="plan">
-          <i class="fa fa-search" aria-hidden="true"></i>
-            <span class="title"> Plan de  Formation</span>
+            <i class="fa fa-calendar" style="color: black;"></i>
+            <span  style="color: black;" class="title">Plan de Formation</span>
         </a>
     </li>
     <li class="active">
       <a  href="reservation">
-        <i class="fa fa-search" aria-hidden="true"></i>
-          <span class="title">Réservation des salles</span>
+        <i class="fa fa-search"  style="color: black;" aria-hidden="true"></i>
+          <span  style="color: black;" class="title">Réservation des salles</span>
       </a>
   </li>
-        
-        
-    <li class="active">
-      <a  href="profilClub">
-        <i class="fa fa-user" aria-hidden="true"></i>
-          <span class="title"> Mon profil</span>
-      </a>
-  </li>
-        
-          <li class="">
-            <a (click)="logout()" >
-                <i class="fa fa-arrow-left"></i>
-                <span class="title">Déconnexion</span></a>
-      
-          </li> 
-        
-      
-        
-        <mat-accordion class="sidebar" routerLinkActive = "active"  >
-        
-           
-   
-        </mat-accordion>
-  
-  
-        <mat-accordion class="sidebar" routerLinkActive = "active"  >
-        
-         
-        </mat-accordion>
-  
-        
-  
+  <li class="active">
+    <a  href="listeAutresResp">
+      <i class="fa fa-list"  style="color: black;" aria-hidden="true"></i>
+        <span  style="color: black;" class="title">Liste des Clubs</span>
+    </a>
+</li>
+  <li class="active">
+    <a  href="profilClub">
+      <i class="fa fa-user"  style="color: black;" aria-hidden="true"></i>
+        <span  style="color: black;" class="title"> Mon profil</span>
+    </a>
+</li>
        
       
-  
-        <mat-accordion class="sidebar" routerLinkActive = "active"  >
-          
-        </mat-accordion>
-  
-        
-      </ul>
-      <!-- sidebar menu end-->
-    </div>
-  </aside>
-  <!--sidebar end-->
-  
-  <section id="main-content">
-    <section class="wrapper">
-  
-        <div class="container-fluid">
-          <router-outlet></router-outlet>
-        </div>
-      </section>
-      </section>
-  
-  </section>
-  
-  </div>
-  
-  <!-- /////////////////////////////////modal///////////////////////////////////////// -->
-<ng-template #content let-modal >
-  <div class="modal-header"  style="background-color: #25857e; height: 40px;" >
-   <h4 style="color: #ffffff; margin-left: 120px; margin-top: 5px;"> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></h4>
-    <h4 class="modal-title" id="modal-basic-title" style="margin-left: 20px;">     Alerte de Confirmation  </h4>
-    <a  class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></a>
-  </div>
-  <div class="modal-body">
-    <form >
-      <div class="mb-6">
-        <!-- <label for="title" style="font-size: 14px; font-family: bold; margin-top: 15px;">Nom de Formation  </label> -->
-        <div class="input-group">
-          <div class="data">
-            <h4 style="margin-left:120px;">Voulez Vraiment Se Déconnecter ? </h4>
-
-        </div>
-        </div>
-      </div>
-      <button type="button" class="btn btn-danger"  style="margin-left: 160px; margin-top: 30px;  font-size: 14px;" (click)="modal.close('Save click')" >
+        <li class="">
+          <a >
+              <i class="fa fa-arrow-left"  style="color: black;"></i>
+              <span class="title" style="color: black;">Déconnexion</span></a>
+    
+        </li> 
+      
+    
      
-        Cancel</button>
-        <button type="button" class="btn btn-success"  style="margin-left: 30px; margin-top: 30px;  font-size: 14px;" (click)="logout();modal.close('Save click')" >
-       
-          Déconnexion</button>
-  
-    </form>
+      
+    </ul>
+
   </div>
+</aside>
 
-</ng-template>
 
-  
+<section id="main-content">
+  <section class="wrapper" >
+
+      <div class="container-fluid">
+        <router-outlet></router-outlet>
+      </div>
+    </section>
+    </section>
+
+</section>
+
+</div>
+
+<!-- /////////////////////////////////modal///////////////////////////////////////// -->
+
+
