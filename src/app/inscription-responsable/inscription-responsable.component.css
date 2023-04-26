@@ -1,0 +1,33 @@
+.navbar-brand .logo, .navbar-brand .logo-alt{
+    max-height:45px;
+    margin-top:5px;
+}
+
+.footer-logo>a>img {
+        max-height: 50px;
+}
+
+    body{
+        background: #fcfcfc ;
+    }
+  
+    .basiccontent{
+        
+        min-height:100vh;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        background:#fff;
+    }
+    .form-control{
+        border-bottom:1px solid #ddd !important;
+    }
+    label{
+        font-weight:normal;
+        font-size:14px;
+        color: black;
+        
+    }
+    .h4{
+        font-family: Georgia, serif;
+     
+    }

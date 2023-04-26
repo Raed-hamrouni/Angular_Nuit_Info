@@ -23,62 +23,34 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
 
         <div style="margin-top:15px;" class="section-header text-center">
            
-            <h2 style="margin-top:-20px; margin-left: -90px;" class="title">Devenir Membre</h2>
+            <h2 style="margin-top:-20px; margin-left: -90px;" class="title">Président de Club</h2>
          
         </div>
 
        <div class="col-md-11" style="width: 1100px; margin-top: -55px;">
             <div class="panel panel-default">
-                <div class="panel-heading" style="color:  #030303; font-size: 16px;" ><strong>Formulaire d'Adhésion :</strong>   </div>
+                <div class="panel-heading" style="color:  #030303; font-size: 16px;" ><strong>Formulaire d'inscription :</strong>   </div>
                 <div class="panel-body">
-                    <form [formGroup]="adherentForm" >
+                    <form [formGroup]="responsableForm" >
                         <input type="hidden" name="_token" >
                         <div class="row">
 
-                            <div style="margin-top:15px;" class="col-md-6">
-
-                                <div class="form-group">
-                                    <label class="control-label">Civilité (*) :</label>
-
-                                    <select name="civilite" id="Civilite" class="form-control col-md-12" style="height: 35px;"
-                                    formControlName="civilite" 
-                                    [ngClass]="{'is-invalid':adherentForm.get('civilite')!.touched && !adherentForm.get('civilite')!.valid}">
-                                        <option value="Mr">M.</option>
-                                        <option value="Mlle">Mlle</option>
-                                        <option value="Mme">Mme</option>
-
-                                    </select>
-                                   
-                                </div>
-                                
-
-                            </div>
+                            
                            
                             <div style="margin-top:15px;" class="col-md-6">
 
                                 <div class="form-group">
-                                    <label for="name" class="control-label">Nom(*) :</label>
+                                    <label for="name" class="control-label">Nom et Prénom (*) :</label>
 
-                                    <input type="text" class="form-control" name="name"  
-                                    formControlName="nom"  placeholder="Entrez Votre Nom"
-                                   [ngClass]="{'is-invalid':adherentForm.get('nom')!.touched && !adherentForm.get('nom')!.valid}">
+                                    <input type="text" class="form-control" name="nomR"  
+                                    formControlName="nomR"  placeholder="Entrez Votre Nom"
+                                   [ngClass]="{'is-invalid':responsableForm.get('nomR')!.touched && !responsableForm.get('nomR')!.valid}">
                                     
     
                                 </div>
 
                             </div>
-                            <div style="margin-top:15px;" class="col-md-6">
-
-                                <div class="form-group">
-                                    <label for="prenom" class="control-label">Prénom (*) :</label>
-
-                                    <input id="prenom" type="text" class="form-control" name="prenom" 
-                                    formControlName="prenom"  placeholder="Entrez Votre Prénom"
-                                    [ngClass]="{'is-invalid':adherentForm.get('prenom')!.touched && !adherentForm.get('prenom')!.valid}">
-    
-                                </div>
-
-                            </div>
+                           
 
                             <div style="margin-top:15px;" class="col-md-6">
 
@@ -86,9 +58,9 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                                 <div class="form-group">
                                     <label class="control-label">Téléphone (*) :</label>
 
-                                    <input  name="telephone" type="text" pattern="[0-9]{8}" class="form-control" placeholder="Entrez Votre Numéro"
-                                    formControlName="telephone" 
-                                    [ngClass]="{'is-invalid':adherentForm.get('telephone')!.touched && !adherentForm.get('telephone')!.valid}"
+                                    <input  name="telEnt" type="text" pattern="[0-9]{8}" class="form-control" placeholder="Entrez Votre Numéro"
+                                    formControlName="telEnt" 
+                                    [ngClass]="{'is-invalid':responsableForm.get('telEnt')!.touched && !responsableForm.get('telEnt')!.valid}"
                                     >
                                 </div>
 
@@ -98,9 +70,9 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                                 <div class="form-group">
                                     <label for="email" class="control-label">Adresse E-mail (*) :</label>
 
-                                    <input type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,10}$" class="form-control" name="email"
-                                    formControlName="email"  placeholder="Entrez Votre E-mail"
-                                    [ngClass]="{'is-invalid':adherentForm.get('email')!.touched && !adherentForm.get('email')!.valid}">
+                                    <input type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,10}$" class="form-control" name="emailEnt"
+                                    formControlName="emailEnt"  placeholder="Entrez Votre E-mail"
+                                    [ngClass]="{'is-invalid':responsableForm.get('emailEnt')!.touched && !responsableForm.get('emailEnt')!.valid}">
                                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                 </div>
 
@@ -113,19 +85,12 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
 
                                     <input  type="password" class="form-control" name="password"   placeholder="Entrez Votre Mot de passe"
                                     formControlName="password" 
-                                    [ngClass]="{'is-invalid':adherentForm.get('password')!.touched && !adherentForm.get('password')!.valid}">
+                                    [ngClass]="{'is-invalid':responsableForm.get('password')!.touched && !responsableForm.get('password')!.valid}">
     
                                 </div>
 
                             </div>
                         </div>
-                       
-                          
-
-                           
-                        
-
-                     
                         <div style="margin-top:15px;" class="studentsection">
 
                             <div class="row">
@@ -134,9 +99,9 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                                     <div class="form-group">
                                         <label class="control-label">Cycle (*) :</label>
 
-                                        <select id="cycle" name="cycle" type="text" class="form-control col-md-12" placeholder=""  style="height: 39px"
+                                        <select id="cycle" name="cycleR" type="text" class="form-control col-md-12" placeholder=""  style="height: 39px"
                                         formControlName="cycle" 
-                                    [ngClass]="{'is-invalid':adherentForm.get('cycle')!.touched && !adherentForm.get('cycle')!.valid}">
+                                    [ngClass]="{'is-invalid':responsableForm.get('cycleR')!.touched && !responsableForm.get('cycleR')!.valid}">
                                     <option value="Licence">Licence</option>
                                     <option value="Mastére">Mastére</option>
                                     <option value="Ingénierie">Ingénierie</option>
@@ -151,9 +116,9 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                                     <div class="form-group">
                                         <label class="control-label">Niveau (*) :</label>
 
-                                        <select id="niveau" name="niveau" type="text" class="form-control" placeholder="" style="height: 39px;"
-                                        formControlName="niveau" 
-                                    [ngClass]="{'is-invalid':adherentForm.get('niveau')!.touched && !adherentForm.get('niveau')!.valid}">
+                                        <select id="niveau" name="niveauR" type="text" class="form-control" placeholder="" style="height: 39px;"
+                                        formControlName="niveauR" 
+                                    [ngClass]="{'is-invalid':responsableForm.get('niveauR')!.touched && !responsableForm.get('niveauR')!.valid}">
                                     <option value="1er Année ">1ér Année</option>
                                     <option value="2éme Année">2éme Année</option>
                                     <option value="3éme Année">3éme Année</option>
@@ -171,9 +136,9 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                                     <div class="form-group">
                                         <label class="control-label">Spécialité (*) :</label>
 
-                                        <select id="specialite" name="specialite" type="text" class="form-control" placeholder=""
-                                        formControlName="specialite"  placeholder="Entrez Votre Spécialité"
-                                    [ngClass]="{'is-invalid':adherentForm.get('specialite')!.touched && !adherentForm.get('specialite')!.valid}">
+                                        <select id="specialite" name="specialiteR" type="text" class="form-control" placeholder=""
+                                        formControlName="specialiteR"  placeholder="Entrez Votre Spécialité"
+                                    [ngClass]="{'is-invalid':responsableForm.get('specialiteR')!.touched && !responsableForm.get('specialiteR')!.valid}">
                                     <option value="Licence LM">Licence LM</option>
                                     <option value="Licence IOT">Licence IOT</option>
                                     <option value="Licence LT">Licence LT</option>
@@ -189,11 +154,11 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                                 <div class="col-md-6">
 
                                     <div class="form-group">
-                                        <label class="control-label">Clubs (*) :</label>
+                                        <label class="control-label"> Responsable de Club (*) :</label>
 
-                                        <select  name="club" id="club" class="form-control col-md-12" style="height: 39px;" formControlName="club"
+                                        <select  name="nomClub" id="club" class="form-control col-md-12" style="height: 39px;" formControlName="nomClub"
                                        placeholder="Choisir Votre Club" 
-                                       [ngClass]="{'is-invalid':adherentForm.get('club')!.touched && !adherentForm.get('club')!.valid}">
+                                       [ngClass]="{'is-invalid':responsableForm.get('nomClub')!.touched && !responsableForm.get('nomClub')!.valid}">
                                         <option value="Arsii">Arsii</option>
                                         <option value="Securinets">Securinets</option>
                                         <option value="Enactus">Enactus</option>
@@ -212,16 +177,7 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                             </div>
 
                         </div>
-                        <div class="form-group">
-                            <label class="control-label">Photo :</label>
-
-                            <input type="file" name="file" id="file" class="form-control col-md-12" style="height: 35px;" 
-                            formControlName="file" placeholder="Entrez Votre Photo" (change)="onUpload($event)"
-                            >
-                            
-                            
-                        
-                        </div>
+                      
 
                         <div style="margin-top:15px;display:none;" class="prosection">
 
@@ -236,7 +192,7 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                         </div>
                          <div style="margin-top:60px;" class="form-group row mb-0">
                             <div class="col-md-6 offset-md-5">
-                                <button class="btn btn-secondary"  [disabled]=!adherentForm.valid  (click)="createAdherent()">Envoyer</button>
+                                <button class="btn btn-secondary"    (click)="createResponsable()">Envoyer</button>
 
                             </div>
                         </div>

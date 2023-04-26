@@ -14,6 +14,8 @@ import { NavbarSuppComponent } from './navbar-supp/navbar-supp.component';
 import { ProfilClubComponent } from './profil-club/profil-club.component';
 import { ListeMembresComponent } from './liste-membres/liste-membres.component';
 import { ProfilMembreComponent } from './profil-membre/profil-membre.component';
+import { ReservationSalleComponent } from './reservation-salle/reservation-salle.component';
+import { InscriptionResponsableComponent } from './inscription-responsable/inscription-responsable.component';
 
 const routes: Routes = [
 
@@ -32,6 +34,8 @@ const routes: Routes = [
     { path:'profilClub',component:ProfilClubComponent},
     { path:'listeMembre',component:ListeMembresComponent},
     { path:'profil-membre/:id',component:ProfilMembreComponent},
+    { path:'reservation',component:ReservationSalleComponent},
+    { path:'inscriptionResp',component:InscriptionResponsableComponent}
 
 
 

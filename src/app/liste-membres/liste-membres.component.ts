@@ -79,9 +79,10 @@ export class ListeMembresComponent implements OnInit {
  
 
   delete(id:any){
-    this.adhServ.deleteAdherent(id).subscribe( data => {    
+    this.opensweetalert1()
+    this.adhServ.deleteAdherent(id).subscribe( data => {   
+      
     this.affiche()
-    //  this.toastr.success("Adhérent supprimé avec succes")
     this.router.navigate(['/liste-membres']);  
     },
     )
@@ -109,7 +110,17 @@ export class ListeMembresComponent implements OnInit {
   logout(){
     this.authServ.logout()
   }
-
+  opensweetalert1(){
+  Swal.fire({
+    title: 'Êtes-vous sûr de vouloir supprimer ceci?',
+    text: 'Cette action est irréversible!',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Oui, supprimer!',
+    cancelButtonText: 'Annuler'
+  })}
 
   opensweetalert2(){
     Swal.fire({

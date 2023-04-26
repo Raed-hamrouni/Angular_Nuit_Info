@@ -9,6 +9,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./inscription.component.css']
 })
 export class InscriptionComponent implements OnInit {
+
   adherentForm!: FormGroup
   loginResponse:any
   constructor(  private router: Router,
@@ -33,6 +34,7 @@ export class InscriptionComponent implements OnInit {
     )
   }
 
+  
 
   createAdherent() {
   this.adhServ.createAdherent(this.adherentForm.value).subscribe((res) => {

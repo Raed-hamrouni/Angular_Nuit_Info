@@ -21,6 +21,8 @@ import { ProfilClubComponent } from './profil-club/profil-club.component';
 import { ListeMembresComponent } from './liste-membres/liste-membres.component';
 import { ProfilMembreComponent } from './profil-membre/profil-membre.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ReservationSalleComponent } from './reservation-salle/reservation-salle.component';
+import { InscriptionResponsableComponent } from './inscription-responsable/inscription-responsable.component';
 
 
 
@@ -42,6 +44,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ProfilClubComponent,
     ListeMembresComponent,
     ProfilMembreComponent,
+    ReservationSalleComponent,
+    InscriptionResponsableComponent,
   ],
   imports: [
     BrowserModule,
