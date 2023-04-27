@@ -20,7 +20,10 @@ export class FormationService {
   deleteFormation(id:any) {
     return this.http.delete(this.path+"/"+ id);
   }
-  
+  uploadFile(data:any) {
+    return this.http.post(this.path+"/upload",data) 
+   
+   }
   getFormation(id: number) {
     return this.http.get(this.path+"/"+ id);
   }

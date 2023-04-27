@@ -1,0 +1,131 @@
+
+<app-navbar-supp></app-navbar-supp>
+<app-sidebar-responsable></app-sidebar-responsable>
+<!DOCTYPE html>
+<html lang="en">
+       
+<h3><i class="fa fa-angle-double-right" style="margin-left: 280px; margin-top: -80px;"></i> Liste des Formations</h3>
+<!-- <div >
+    <input type="text" class="form-control"    placeholder="Search"  style="height: 30px; width: 400px; margin-left: 280px; margin-top: -5px;" > 
+      </div> -->
+      <button style="margin-left: 1280px; margin-top: -90px;" type="button" class="btn btn-info" > 
+        <span class="fa fa-plus"></span>
+      </button>
+<body style="margin-top: 1px;">
+    <div class="card-group" style="margin-left: 310px;">
+       
+        <div *ngFor="let formation of Formation | paginate : {itemsPerPage: 4, currentPage: p}" class="col-md3 my-2">
+            <div class="card" style="width: 15rem; height: 30rem;">
+                <img  class="card-img-top" src="http://localhost:3000/{{formation.file}}" >
+                <div class="card-body">
+                    <h5 class="card-title" >{{formation.title}}</h5>
+                    <h6>{{formation.prix}} DT</h6>
+                    <h6>{{formation.date}} </h6>
+                    <div class="card-footer">
+                        <small class="text-muted">{{formation.heure}}</small>
+                      </div>
+                      <p style="margin-top: 10px; margin-left: 40px;" >
+                        <button  type="button" (click)="delete(formation.id)" class="btn btn-danger" > 
+                        <span class="fa fa-trash"></span>
+                      </button>
+                   
+                      <button mat-raised-button class="action-button btn" style="font-size:14px; margin-left: 100px;">
+                        <i class="fa fa-edit" style="font-size: 20px;"></i>
+                  
+                      </button>
+                <a routerLink="/detail/{{formation.id}}"  class="btn btn-light">
+                    <span class="fa fa-info"></span>
+                    
+                </a>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+    <div class="pagination" style="margin-top: 5px;">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+    
+</body>
+</html>
+
+
+
+  <!-- ******************************************************Modal modifer formation ****************************************************** -->
+
+  <ng-template #content3 let-modal>
+    <div class="modal-header"  style="background-color: #25857e;">
+      <h4 class="modal-title" id="modal-basic-title" style="margin-left: 160px;">Modifier Une Formation</h4>
+      <a  class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"
+      ></a>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="mb-6">
+          <label style="font-size: 14px; font-family: bold; margin-top: 15px;">Nom de Formation :</label>
+          <div class="input-group">
+            <input  class="form-control" style="font-size:15px" name="title"
+          [(ngModel)] ="title" >
+          </div>
+        </div>
+        <div class="mb-6">
+          <label for="title" style="font-size: 14px; font-family: bold; margin-top: 15px;"> Date début:</label>
+          <div class="input-group">
+            <input class="form-control"  style="font-size:15px" name="start"
+            [(ngModel)] ="start" >
+          </div>
+        </div>
+        <div class="mb-6">
+          <label for="title" style="font-size: 14px; font-family: bold; margin-top: 15px;"> Heure de début:</label>
+          <div class="input-group">
+            <input type="time"  class="form-control"  style="font-size:15px" name="heure"
+            [(ngModel)] ="heure" >
+          </div>
+        </div>
+          <div class="mb-6">
+            <label for="date_fin" style="font-size: 14px; font-family: bold; margin-top: 15px;">Date_fin :</label>
+            <div class="input-group">
+              <input type="date_fin" class="form-control"  style="font-size:15px" name="date"
+              [(ngModel)] ="date_fin" >
+         
+            </div>
+          </div>
+          <div class="mb-6">
+            <label for="duree" style="font-size: 14px; font-family: bold; margin-top: 15px;">Durée :</label>
+            <div class="input-group">
+              <input  class="form-control"  style="font-size:15px" name="duree"
+              [(ngModel)] ="duree" >
+             
+            </div>
+          </div>
+          <div class="mb-6">
+            <label for="formateur" style="font-size: 14px; font-family: bold; margin-top: 15px;">Formateur :</label>
+            <div class="input-group">
+              <input  class="form-control"  style="font-size:15px" name="formateur"
+              [(ngModel)] ="formateur">
+            </div>
+          </div>
+          <div class="mb-6">
+            <label for="prix" style="font-size: 14px; font-family: bold; margin-top: 15px;">Prix :</label>
+            <div class="input-group">
+              <input class="form-control"  style="font-size:15px" name="prix"
+              [(ngModel)] ="prix">
+            </div>
+          </div>
+          <div class="mb-6">
+            <label for="prix" style="font-size: 14px; font-family: bold; margin-top: 15px;">Lieu :</label>
+            <div class="input-group" >
+              <input  class="form-control"  style="font-size:15px" name="lieu"
+              [(ngModel)] ="lieu" >
+            </div>
+          </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" style="margin-right: 200px; width: 80px; font-size: 14px;"   (click)="update();modal.close('Save click')">Valider</button>
+    </div>
+  
+      
+  </ng-template>
+  

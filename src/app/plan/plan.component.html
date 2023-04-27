@@ -1,1 +1,62 @@
-<p>plan works!</p>
+<app-navbar-supp></app-navbar-supp>
+<app-sidebar-responsable></app-sidebar-responsable>
+
+  
+  <h3 style="margin-top: -17px;"><i class="fa fa-angle-double-right" style="margin-left: 280px; margin-top: -2px;"></i> Liste Des Formations</h3>
+  <div _ngcontent-roy-c3="">
+           <div >
+                <input type="text" class="form-control"  placeholder="Search"  style="height: 30px; width: 400px; margin-left: 280px; margin-top: 25px;" > 
+                  </div>
+                        
+             <table class="table table-striped" style="margin-top: 8%;" >
+                  
+                      <thead class="thead-inverse">
+                        <tr>
+                          <th>Photo</th>
+                          <th>Titre</th>
+                          <th>Date </th>
+                          <th>Heure
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                          </th>
+                          <th>Date Fin  
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                          </th>
+                          <th>Action  
+                            <i class="" aria-hidden="true"></i>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let formation of Formation | paginate : {itemsPerPage: 3, currentPage: p} " >
+                            <img src="" alt="user" width="90" style="margin-left: 90px;" class="img-circle">
+                              <td>{{formation.title}} </td>
+                              <td>{{formation.date}}</td>
+                              <td>{{formation.heure}}</td>
+                              <td>{{formation.date_fin}}</td>
+                              <td>
+                            
+                              </td>
+                             
+                          </tr>
+                      </tbody>
+                      
+                    </table>
+  
+  
+                    <div class="pagination" style="margin-top: 350px;">
+                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                  </div>
+                  </div>
+                
+              
+
+
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,8 @@
 import { NgModule } from '@angular/core';
+// FullCalendarModule.registerPlugins([ 
+//   dayGridPlugin,
+//   interactionPlugin
+// ]);
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
@@ -27,6 +31,11 @@ import { ListeAutresComponent } from './liste-autres/liste-autres.component';
 import { InfoMembreComponent } from './info-membre/info-membre.component';
 import { UpdateAdherentComponent } from './update-adherent/update-adherent.component';
 import { PlanComponent } from './plan/plan.component';
+import { ListeFormationsComponent } from './liste-formations/liste-formations.component';
+// import { FullCalendarModule } from '@fullcalendar/angular';
+// import interactionPlugin from '@fullcalendar/interaction';
+// import dayGridPlugin from '@fullcalendar/daygrid';
+
 
 
 
@@ -55,6 +64,7 @@ import { PlanComponent } from './plan/plan.component';
     InfoMembreComponent,
     UpdateAdherentComponent,
     PlanComponent,
+    ListeFormationsComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +73,8 @@ import { PlanComponent } from './plan/plan.component';
     ReactiveFormsModule,
     FormsModule,
     NgxPaginationModule,
+    // FullCalendarModule,
+
 
   
 
