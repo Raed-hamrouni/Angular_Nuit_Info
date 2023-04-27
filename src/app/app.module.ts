@@ -26,6 +26,8 @@ import { InscriptionResponsableComponent } from './inscription-responsable/inscr
 import { ListeAutresComponent } from './liste-autres/liste-autres.component';
 import { InfoMembreComponent } from './info-membre/info-membre.component';
 import { UpdateAdherentComponent } from './update-adherent/update-adherent.component';
+import { PlanComponent } from './plan/plan.component';
+
 
 
 
@@ -52,6 +54,7 @@ import { UpdateAdherentComponent } from './update-adherent/update-adherent.compo
     ListeAutresComponent,
     InfoMembreComponent,
     UpdateAdherentComponent,
+    PlanComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +63,7 @@ import { UpdateAdherentComponent } from './update-adherent/update-adherent.compo
     ReactiveFormsModule,
     FormsModule,
     NgxPaginationModule,
+
   
 
   ],

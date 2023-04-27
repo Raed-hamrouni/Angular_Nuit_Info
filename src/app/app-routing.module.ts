@@ -19,6 +19,7 @@ import { InscriptionResponsableComponent } from './inscription-responsable/inscr
 import { ListeAutresComponent } from './liste-autres/liste-autres.component';
 import { InfoMembreComponent } from './info-membre/info-membre.component';
 import { UpdateAdherentComponent } from './update-adherent/update-adherent.component';
+import { PlanComponent } from './plan/plan.component';
 
 const routes: Routes = [
 
@@ -41,7 +42,8 @@ const routes: Routes = [
     { path:'inscriptionResp',component:InscriptionResponsableComponent},
     { path:'listeAutresResp',component:ListeAutresComponent},
     { path:'infoMembre/:id',component:InfoMembreComponent},
-    { path:'modifierProfil',component:UpdateAdherentComponent}
+    { path:'modifierProfil',component:UpdateAdherentComponent},
+    { path:'planEvent',component:PlanComponent}
 
 
 

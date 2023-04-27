@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+
 interface Adhérent {
   id:number;
   nom:string;
@@ -36,10 +37,7 @@ export class ListeMembresComponent implements OnInit {
   Admin!: any;
   closeResult = '';
   updateform!: FormGroup
-  public popoverTitle:string=' Alert De Confirmation';
-  public popoverMessage:string='Voulez Vous vraiment Supprimer cet Adhérent ?';
-  public confirmClicked:boolean=false;
-  public cancelClicked:boolean=false;
+
 
   constructor( private adhServ: AdherentService,
     private authServ: AuthService,
@@ -87,14 +85,7 @@ export class ListeMembresComponent implements OnInit {
     },
     )
   }
-  // open(content:any) {
-  //   this.affiche()
-  //   this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-  //     this.closeResult = `Closed with: ${result}`;
-  //   }, (reason) => {
-  //     this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-  //   });
-  // }
+
  
   update(){
       
@@ -113,7 +104,6 @@ export class ListeMembresComponent implements OnInit {
   opensweetalert1(){
   Swal.fire({
     title: 'Êtes-vous sûr de vouloir supprimer ceci?',
-    text: 'Cette action est irréversible!',
     icon: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#3085d6',

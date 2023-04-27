@@ -33,6 +33,15 @@ export class AdherentService {
     return this.http.post(this.path+"/upload",data) 
    
    }
+   participer(ida:any,data:any) {
+    return this.http.post(this.path+"/a/"+ida,data) 
+  
+  }
+  getAdherentByFormation(id:number){
+    return this.http.get(this.path+"/get/"+id);
+    
+      }
+    
 
 
 
