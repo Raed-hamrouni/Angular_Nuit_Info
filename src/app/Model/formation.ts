@@ -8,6 +8,7 @@ export interface Formation {
     formateur:string;
     prix:string;
     lieu:string;
+    file:string;
 
 }
 

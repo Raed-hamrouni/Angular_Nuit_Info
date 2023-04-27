@@ -21,6 +21,7 @@ import { InfoMembreComponent } from './info-membre/info-membre.component';
 import { UpdateAdherentComponent } from './update-adherent/update-adherent.component';
 import { PlanComponent } from './plan/plan.component';
 import { ListeFormationsComponent } from './liste-formations/liste-formations.component';
+import { AjouterFormationComponent } from './ajouter-formation/ajouter-formation.component';
 
 const routes: Routes = [
 
@@ -46,6 +47,8 @@ const routes: Routes = [
     { path:'modifierProfil',component:UpdateAdherentComponent},
     { path:'planEvent',component:PlanComponent},
     { path:'listeFormations',component:ListeFormationsComponent},
+    { path:'AjoutEvent',component:AjouterFormationComponent},
+
 
 
 

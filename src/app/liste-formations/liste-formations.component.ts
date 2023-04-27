@@ -42,7 +42,6 @@ export class ListeFormationsComponent implements OnInit {
     private formationservice: FormationService,
     private authServ: AuthService,
     private http: HttpClient,
-    // private modalService: NgbModal,
     private fb: FormBuilder,
     private route: Router) 
     { }
@@ -72,35 +71,7 @@ export class ListeFormationsComponent implements OnInit {
     },
     )
   }
-  update(){
-    console.log(this._id);
-    console.log("update ",this.lieu);
-    let title=this.title;
-    let heure=this.heure;
-    let date_fin=this.date_fin;
-    let duree=this.duree;
-    let formateur=this.formateur;
-    let prix=this.prix;
-    let lieu=this.lieu;
-    let date=this.start;
-    if(date<=date_fin){
-    this.form ={title,heure, date,date_fin,duree,formateur,prix,lieu}
-    this.affiche()
-    this.formationservice.updateFormation(this._id,this.form).subscribe( data => {
 
-      console.log();
-
-      this.loginResponse=this.opensweetalert2(); 
-      window.setTimeout(function(){location.reload()},2000)
-
-    });
- } 
-
- else{
-  console.log("raka7 date ");
-  this.loginResponse=this.opensweetalert4();
-}
-}
 opensweetalert2() {
   Swal.fire({
     position: 'top-end',
@@ -132,22 +103,5 @@ opensweetalert3() {
 
 
    
-//  open(content:any) {
-//   this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-//     this.closeResult = `Closed with: ${result}`;
-//   }, (reason) => {
-//     this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-//   });
-// }
 
-
-// private getDismissReason(reason: any): string {
-//   if (reason === ModalDismissReasons.ESC) {
-//     return 'by pressing ESC';
-//   } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-//     return 'by clicking on a backdrop';
-//   } else {
-//     return `with: ${reason}`;
-//   }
-// }
 }

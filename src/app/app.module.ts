@@ -32,6 +32,7 @@ import { InfoMembreComponent } from './info-membre/info-membre.component';
 import { UpdateAdherentComponent } from './update-adherent/update-adherent.component';
 import { PlanComponent } from './plan/plan.component';
 import { ListeFormationsComponent } from './liste-formations/liste-formations.component';
+import { AjouterFormationComponent } from './ajouter-formation/ajouter-formation.component';
 // import { FullCalendarModule } from '@fullcalendar/angular';
 // import interactionPlugin from '@fullcalendar/interaction';
 // import dayGridPlugin from '@fullcalendar/daygrid';
@@ -65,6 +66,7 @@ import { ListeFormationsComponent } from './liste-formations/liste-formations.co
     UpdateAdherentComponent,
     PlanComponent,
     ListeFormationsComponent,
+    AjouterFormationComponent,
   ],
   imports: [
     BrowserModule,
