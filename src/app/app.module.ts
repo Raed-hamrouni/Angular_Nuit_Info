@@ -34,6 +34,7 @@ import { PlanComponent } from './plan/plan.component';
 import { ListeFormationsComponent } from './liste-formations/liste-formations.component';
 import { AjouterFormationComponent } from './ajouter-formation/ajouter-formation.component';
 import { ParticipantComponent } from './participant/participant.component';
+import { UpdateFormationComponent } from './update-formation/update-formation.component';
 
 // import { FullCalendarModule } from '@fullcalendar/angular';
 // import interactionPlugin from '@fullcalendar/interaction';
@@ -70,6 +71,7 @@ import { ParticipantComponent } from './participant/participant.component';
     ListeFormationsComponent,
     AjouterFormationComponent,
     ParticipantComponent,
+    UpdateFormationComponent,
   ],
   imports: [
     BrowserModule,

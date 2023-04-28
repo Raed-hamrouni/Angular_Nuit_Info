@@ -33,7 +33,7 @@ export class ListeFormationsComponent implements OnInit {
   loginResponse4:any;
   formateur:any
   prix:any
-  start:any
+  file:any
   date_fin: any;
   lieu: any;
   form:any
@@ -86,7 +86,7 @@ opensweetalert2() {
   Swal.fire({
     position: 'top-end',
     icon: 'success',
-    title: 'Formation Modifée avec Succès',
+    title: 'Formation Modifiée avec Succès',
     showConfirmButton: false,
     timer: 2000
   })
@@ -118,9 +118,4 @@ opensweetalert3() {
     confirmButtonText: 'Oui, supprimer!',
     cancelButtonText: 'Annuler'
   })}
-
-
-
-   
-
 }

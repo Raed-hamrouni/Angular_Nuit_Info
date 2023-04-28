@@ -121,7 +121,7 @@ affiche(){
     Swal.fire({
       position: 'top-end',
       icon: 'warning',
-      title: 'Les donneessss 8alet',
+      title: 'Vérifier Les Données ',
       showConfirmButton: false,
       timer: 3500
     })

@@ -4,35 +4,35 @@
 <!DOCTYPE html>
 <html lang="en">
        
-<h3><i class="fa fa-angle-double-right" style="margin-left: 280px; margin-top: -80px;"></i> Liste des Formations</h3>
-      <button style="margin-left: 1280px; margin-top: -90px;" routerLink="/AjoutEvent" type="button" class="btn btn-info" > 
+<h3><i class="fa fa-angle-double-right" style="margin-left: 280px; margin-top: -180px;"></i> Liste des Formations</h3>
+      <button style="margin-left: 1280px; margin-top: -190px;" routerLink="/AjoutEvent" type="button" class="btn btn-info" > 
         <span class="fa fa-plus"></span>
       </button>
-<body style="margin-top: 1px;">
+<body style="margin-top: -5px;">
     <div class="card-group" style="margin-left: 310px;">
        
         <div *ngFor="let formation of Formation | paginate : {itemsPerPage: 2, currentPage: p}" class="col-md3 my-2">
-            <div class="card" style="width: 15rem; height: 20rem;">
-                <img src="http://localhost:3000/{{formation.file.substring(12)}}" width="110" style="margin-left: 90px;" class="circle">
+            <div class="card" style="width: 15rem; height: 22rem;">
+                <img src="http://localhost:3000/{{formation.file.substring(12)}}" width="200" height="170px" style="margin-left: 20px;" class="circle">
                 <div class="card-body">
                     <h5 class="card-title" >{{formation.title}}</h5>
-                    <h6>{{formation.prix}} DT</h6>
                     <h6>{{formation.date}} </h6>
                     <div class="card-footer">
-                        <small class="text-muted">{{formation.heure}}</small>
+                        <small class="text-muted">{{formation.heure}}h</small>
+                        <small style="margin-left: 80px;" class="text-muted">{{formation.prix}}</small>
                       </div>
                       <p style="margin-top: 10px; margin-left: 40px;" >
-                        <button  class="action-button btn-danger" type="button" (click)="opensweetalert1();delete(formation._id)" > 
+                        <button class="action-button btn-danger" type="button" (click)="opensweetalert1();delete(formation._id)" > 
                             <span class="fa fa-trash"></span>
                           </button>
-                      <a routerLink="/modifier"  class="btn btn-warning">
-                        <span class="fa fa-edit"></span>
-                    </a>
+                          <button  class="action-button btn-warning" type="button" routerLink="/updateFormation/{{formation._id}}" > 
+                            <span class="fa fa-edit"></span>
+                          </button>
                 <a routerLink="/detail/{{formation.id}}"  class="btn btn-light">
                     <span class="fa fa-info"></span>
                     
                 </a>
-                <button mat-raised-button class="action-button btn" (click)="getList(id)" style="font-size:14px;">
+                <button  class="action-button btn" (click)="getList(id)" style="font-size:14px;">
                     <span class="fa fa-list" style="font-size: 20px;"></span>
               
                   </button>

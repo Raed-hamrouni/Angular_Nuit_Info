@@ -1,0 +1,107 @@
+
+<app-navbar-supp></app-navbar-supp>
+<app-sidebar-responsable></app-sidebar-responsable>
+<div class="row" style="width: 1100px;">
+    <div class="col-md-12" style="margin-top: -60px; margin-left: 220px; width: 1150px;" >
+        <div class="panel panel-default">
+                <div class="panel-body">
+<div class="container" >
+    <div class="row" style="width: 1000px;">
+  
+        
+        <div class="col-lg-1"></div>
+  
+        <div class="col-lg-10">
+            <div id="ui">
+                <form>
+                <h3><i class="fa fa-angle-right"></i> Personal informations</h3>
+                <br>
+  
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="title">Nom</label>
+                        <input type="text" name="title" class="form-control"  id="title" 
+                       [(ngModel)] ="Formation.title" >
+                    </div>
+  
+                    <div class="col-lg-6">
+                        <label for="prenom">Date Début</label>
+                        <input type="date" name="date" class="form-control" id="date" 
+                        [(ngModel)] ="Formation.date" >
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="fname">Date Fin</label>
+                        <input type="date" name="date_fin" class="form-control" id="date_fin" 
+                        [(ngModel)] ="Formation.date_fin" >
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="fname">Heure</label>
+                            <input type="time" name="heure" class="form-control"  id="heure" 
+                            [(ngModel)] ="Formation.heure" >
+                        </div>
+                </div>
+                <div class="row">
+                    
+  
+                    <div class="col-lg-6">
+                        <label for="fname">Duree</label>
+                        <input  [(ngModel)] ="Formation.duree" name="duree" class="form-control"  id="duree" style="height: 35px; font-size:16px">
+                
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="formateur">Formateur </label>
+                        <input type="text" name="formateur" class="form-control"  id="formateur" style="height: 35px; font-size:16px"
+                        [(ngModel)] ="Formation.formateur">
+                       
+                    </div>
+                </div>
+                <div class="row">
+               
+
+                <div class="col-lg-6">
+                    <label for="specialite">Prix</label>
+                    <input type="text" name="prix" class="form-control" id="prix" 
+                    [(ngModel)] ="Formation.prix">
+                </div>
+<br>
+<br>
+<br>
+                <div class="col-lg-12">
+                    <label class="control-label">Photo </label>
+                    <img src="http://localhost:3000/{{Formation.file.substring(12)}}" alt="user" style="margin-left:490px ; margin-top: -50px;" width="90" class="img-circle"  [(ngModel)] ="Formation.file">
+                    <input   class="form-control"  type="file" name="file" id="file" class="form-control col-md-12" style="height: 35px;" 
+                    
+                    
+                    [(ngModel)] ="Formation.file">
+                    
+                </div>
+            
+                </div>
+                
+<br>
+<button (click)="update();opensweetalert2()" class = "btn" type ="button" style="height:35px ; margin-top: 5px;" >Enregistrer</button>
+            </form>
+            </div>
+  
+        
+  
+    </div>
+  
+    <div class="col-lg-1"></div>
+  
+    </div>
+    
+        
+    
+  </div>
+                </div>
+
+                
+            </div>
+
+        </div>
+    </div>
+
+
+
+

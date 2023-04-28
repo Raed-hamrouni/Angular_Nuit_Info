@@ -23,6 +23,7 @@ import { PlanComponent } from './plan/plan.component';
 import { ListeFormationsComponent } from './liste-formations/liste-formations.component';
 import { AjouterFormationComponent } from './ajouter-formation/ajouter-formation.component';
 import { ParticipantComponent } from './participant/participant.component';
+import { UpdateFormationComponent } from './update-formation/update-formation.component';
 
 const routes: Routes = [
 
@@ -50,6 +51,7 @@ const routes: Routes = [
     { path:'listeFormations',component:ListeFormationsComponent},
     { path:'AjoutEvent',component:AjouterFormationComponent},
     { path:'Participant',component:ParticipantComponent},
+    { path:'updateFormation/:id',component:UpdateFormationComponent},
 
 
 
