@@ -13,6 +13,7 @@ export class InscriptionResponsableComponent implements OnInit {
   isSuccessful = false;
   isSignUpFailed = false;
   errorMessage = '';
+  loginResponse:any
 
 
   responsableForm!: FormGroup
@@ -41,6 +42,7 @@ export class InscriptionResponsableComponent implements OnInit {
 
   createResponsable() {
     this.ResponsableService.createResponsable(this.responsableForm.value).subscribe((res) => {
+      this.loginResponse=this.opensweetalert();
       this.router.navigate(['/acceuil']);
    
     });
@@ -68,4 +70,5 @@ export class InscriptionResponsableComponent implements OnInit {
       timer: 3500
     })
    }
+   
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AdherentService } from '../shared/adherent.service';
 import Swal from 'sweetalert2';
 @Component({
@@ -9,12 +9,26 @@ import Swal from 'sweetalert2';
   styleUrls: ['./inscription.component.css']
 })
 export class InscriptionComponent implements OnInit {
+  // selectedClubs = {
+    
+  // };
 
+  // clubs: Array<any> = [
+  //   { value: 'Arsii', label: 'Arsii' },
+  //   { value: 'Enactus', label: 'Enactus' },
+  //   { value: 'Securinets', label: 'Securinets' },
+  //   { value: 'Fancom', label: 'Fancom' },
+  //   { value: '3zéro', label: '3zero' }
+  // ];
   adherentForm!: FormGroup
   loginResponse:any
   constructor(  private router: Router,
     private fb: FormBuilder,
-    private adhServ: AdherentService) { }
+    private adhServ: AdherentService) {
+      this.adherentForm = fb.group({
+        selectedClubs:  new FormArray([])
+       });
+     }
   ngOnInit(): void {
     this.adherentForm= this.fb.group ( 
       {
@@ -27,7 +41,7 @@ export class InscriptionComponent implements OnInit {
         cycle:['',Validators.required],
         telephone:['',Validators.required],
         specialite:['',Validators.required],
-        club:['',Validators.required],
+        club:[''],
         file:[''],
       }
 
@@ -35,7 +49,6 @@ export class InscriptionComponent implements OnInit {
   }
 
   
-
   createAdherent() {
   this.adhServ.createAdherent(this.adherentForm.value).subscribe((res) => {
     this.loginResponse=this.opensweetalert();

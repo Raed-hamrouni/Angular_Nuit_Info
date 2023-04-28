@@ -190,10 +190,10 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
 
                                     <div class="form-group">
                                         <label class="control-label">Clubs (*) :</label>
-
-                                        <select  name="club" id="club" class="form-control col-md-12" style="height: 39px;" formControlName="club"
-                                       placeholder="Choisir Votre Club" 
-                                       [ngClass]="{'is-invalid':adherentForm.get('club')!.touched && !adherentForm.get('club')!.valid}">
+                                        
+                                        <select id="club" name="club" type="text" class="form-control" placeholder=""
+                                        formControlName="club"  placeholder="Entrez Votre Spécialité"
+                                    [ngClass]="{'is-invalid':adherentForm.get('club')!.touched && !adherentForm.get('club')!.valid}">
                                         <option value="Arsii">Arsii</option>
                                         <option value="Securinets">Securinets</option>
                                         <option value="Enactus">Enactus</option>
@@ -201,9 +201,14 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                                         <option value="Atast">Atast</option>
                                         <option value="3Zero">3Zero</option>
                                         <option value="Croissant Rouge">Croissant Rouge</option>
-                                      
-                                        
-                                    </select>
+                                        </select>
+<!-- 
+                                        <div *ngFor="let club of clubs">
+                                            <input type="checkbox"  [value]="club.value"
+                                            />
+                                            {{ club.label}}
+                                           
+                                          </div> -->
                                         
                                     </div>
 
