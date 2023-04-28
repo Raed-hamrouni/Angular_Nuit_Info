@@ -2,8 +2,6 @@
 <app-navbar-supp></app-navbar-supp>
 <app-sidebar-responsable></app-sidebar-responsable>
 <!DOCTYPE html>
-<html lang="en">
-       
 <h3><i class="fa fa-angle-double-right" style="margin-left: 280px; margin-top: -180px;"></i> Liste des Formations</h3>
       <button style="margin-left: 1280px; margin-top: -190px;" routerLink="/AjoutEvent" type="button" class="btn btn-info" > 
         <span class="fa fa-plus"></span>
@@ -16,8 +14,8 @@
                 <img src="http://localhost:3000/{{formation.file.substring(12)}}" width="200" height="170px" style="margin-left: 20px;" class="circle">
                 <div class="card-body">
                     <h5 class="card-title" >{{formation.title}}</h5>
-                    <small class="text-muted"> assuré par : {{formation.formateur}}h</small>
-                    <h6>{{formation.date}} ~ {{formation.date_fin}} </h6>
+                    <small class="text-muted"> assuré par : {{formation.formateur}}</small>
+                    <h6>{{formation.date}} ~ {{formation.date_fin}}</h6>
                     <div class="card-footer">
                         <small class="text-muted">{{formation.heure}}h</small>
                         <small style="margin-left: 80px;" class="text-muted">{{formation.prix}} DT</small>
@@ -49,7 +47,7 @@
       </div>
     
 </body>
-</html>
+
 
 
 

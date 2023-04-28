@@ -56,15 +56,29 @@ _id:any
       })
     }
 
-  update(){
+//   update(){
+//       if(this.date<=this.date_fin){
+//     this.formationService.updateFormation(this.id,this.Formation).subscribe( data => {
+//      this.router.navigate(['/listeFormations']);
+//     },(error)=>{
+//       console.log(error);
       
-    this.formationService.updateFormation(this.id,this.Formation).subscribe( data => {
-      // this.toastr.success("Adhérent Modifié avec succès")
-     this.router.navigate(['/listeFormations']);
-    },(error)=>{
-      console.log(error);
-    });
- }
+//     });
+//  }
+ update(Formation:any): void {
+  if (Formation.date<=Formation.date_fin) {
+    this.formationService.updateFormation(this.id,this.Formation).subscribe(
+      this.loginResponse=this.opensweetalert2);
+      window.setTimeout(function(){location.reload()},1000)
+      this.router.navigate(['/listeFormations']);
+  } 
+  
+  
+  else {
+    console.error("La date de début ne peut pas être postérieure à la date de fin !");
+    this.loginResponse=this.opensweetalert4();
+  }
+}
 
  opensweetalert2() {
   Swal.fire({
@@ -79,8 +93,8 @@ _id:any
   Swal.fire({
     icon: 'error',
     title: 'Oops...',
-    text: 'Champ date n"est pas correcte !',
-    footer: 'Vérifier les Dates de formation'
+    text: 'Champ des dates ne sont pas correctes !',
+    footer: 'Vérifier les Dates de la Formation'
   })
  }
 }

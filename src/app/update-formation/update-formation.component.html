@@ -14,7 +14,7 @@
         <div class="col-lg-10">
             <div id="ui">
                 <form>
-                <h3><i class="fa fa-angle-right"></i> Personal informations</h3>
+                <h3><i class="fa fa-angle-right"></i> Modifier Un Evénement</h3>
                 <br>
   
                 <div class="row">
@@ -67,7 +67,7 @@
 <br>
 <br>
                 <div class="col-lg-12">
-                    <label class="control-label">Photo </label>
+                    <label class="control-label">Affiche</label>
                     <img src="http://localhost:3000/{{Formation.file.substring(12)}}" alt="user" style="margin-left:490px ; margin-top: -50px;" width="90" class="img-circle"  [(ngModel)] ="Formation.file">
                     <input   class="form-control"  type="file" name="file" id="file" class="form-control col-md-12" style="height: 35px;" 
                     
@@ -79,7 +79,7 @@
                 </div>
                 
 <br>
-<button (click)="update();opensweetalert2()" class = "btn" type ="button" style="height:35px ; margin-top: 5px;" >Enregistrer</button>
+<button (click)="update(Formation)" class = "btn" type ="button" style="height:35px ; margin-top: 5px;" > Enregistrer </button>
             </form>
             </div>
   

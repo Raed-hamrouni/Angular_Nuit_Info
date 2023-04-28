@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { FormationService } from '../shared/formation.service';
 import Swal from 'sweetalert2';
 import { AdherentService } from '../shared/adherent.service';
+import { ResponsableService } from '../shared/responsable.service';
 
 
 @Component({
@@ -39,9 +40,11 @@ export class ListeFormationsComponent implements OnInit {
   form:any
   _id:any;
   closeResult = '';
+  Responsable:any;
   constructor( private adhServ: AdherentService,
     private formationservice: FormationService,
     private authServ: AuthService,
+   private responsableService: ResponsableService,
     private http: HttpClient,
     private fb: FormBuilder,
     private route: Router,
@@ -50,6 +53,7 @@ export class ListeFormationsComponent implements OnInit {
 
 
   ngOnInit(): void {
+    
       this.affiche();
       this.formationservice.getFormation(this.id).subscribe( data => {
         console.log(data);

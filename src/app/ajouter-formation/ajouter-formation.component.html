@@ -126,7 +126,7 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                                     <div class="form-group">
                                         <label class="control-label">Prix (*) :</label>
 
-                                        <input type="text" name="prix" type="text" class="form-control col-md-12" placeholder=""  style="height: 39px"
+                                        <input type="text" pattern="[1-9][0-9]{0,2}" name="prix" type="text" class="form-control col-md-12" placeholder=""  style="height: 39px"
                                         formControlName="prix" 
                                     [ngClass]="{'is-invalid':formationForm.get('prix')!.touched && !formationForm.get('prix')!.valid}">
                                     
