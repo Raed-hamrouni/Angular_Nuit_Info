@@ -5,10 +5,10 @@
 
         <div class="wrapper" style="margin-top: 100px; margin-left: -10px;">
           <div class="left"> 
-            <img  src="http://localhost:3000/{{Responsable.file.substring(12)}}"  alt="Admin" width="190" class="rounded-circle">
+            <img  src="http://localhost:3000/{{Responsable.file.substring(12)}}"  alt="Admin" width="190" class="">
             <br>
             <br>
-            <h4 style="color: rgb(7, 6, 6);"> {{Responsable.nomR}} </h4>
+            <!-- <h4 style="color: rgb(7, 6, 6);"> {{Responsable.nomR}} </h4> -->
             <h4 style="color: rgb(7, 6, 6);">"{{Responsable.nomClub}}" </h4>
            
         
@@ -17,22 +17,34 @@
           <div class="right">
         
             <div class="info">
-                  <h3> informations</h3>
+                  <h3> informations sur le Responsable</h3>
               <div class="info_data">
                     <div class="data">
                       <h4>Email</h4>
                       <p> {{Responsable.emailEnt}}</p>
                   </div>
                   <div class="data">
+                    <h4>Nom et Prénom </h4>
+                    <p> {{Responsable.nomR}}</p>
+                </div>
+                <br>
+                  <div class="data">
                     <h4>Situation</h4>
-                    <p> Président de Club {{Responsable.nomClub}} </p>
+                    <p> Président de Club "{{Responsable.nomClub}}" </p>
                 </div>
                
-       
+              
+             
          
         
             </div>
+            <div class="data">
+              <h4>Niveau D'etude</h4>
+              <p>  {{Responsable.niveauR}} {{Responsable.specialiteR}}</p>
           </div>
+      
+          </div>
+          
           
                     
     <div class="row">

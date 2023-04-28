@@ -45,8 +45,11 @@ export class InscriptionResponsableComponent implements OnInit {
       this.loginResponse=this.opensweetalert();
       this.router.navigate(['/acceuil']);
    
+    },
+    error => {
+      this.loginResponse=this.opensweetalert2();
     });
-    console.log(this.responsableForm.value)
+  
   }
 
   onUpload(event:any){
@@ -65,7 +68,16 @@ export class InscriptionResponsableComponent implements OnInit {
     Swal.fire({
       position: 'top-end',
       icon: 'success',
-      title: 'Your Registration has been saved',
+      title: 'Responsable inscrit avec Succès',
+      showConfirmButton: false,
+      timer: 3500
+    })
+   }
+   opensweetalert2() {
+    Swal.fire({
+      position: 'top-end',
+      icon: 'warning',
+      title: 'Email déjà Existe',
       showConfirmButton: false,
       timer: 3500
     })

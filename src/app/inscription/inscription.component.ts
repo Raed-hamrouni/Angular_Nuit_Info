@@ -76,7 +76,7 @@ export class InscriptionComponent implements OnInit {
     Swal.fire({
       position: 'top-end',
       icon: 'success',
-      title: 'Your Registration has been Saved',
+      title: 'Adhérent inscrit Avec Succès',
       showConfirmButton: false,
       timer: 3500
     })
@@ -86,7 +86,7 @@ export class InscriptionComponent implements OnInit {
     Swal.fire({
       position: 'top-end',
       icon: 'warning',
-      title: 'Email already Exists',
+      title: 'Email déjà Existe',
       showConfirmButton: false,
       timer: 3500
     })

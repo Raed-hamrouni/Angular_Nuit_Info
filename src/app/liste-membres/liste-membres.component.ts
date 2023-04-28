@@ -77,9 +77,9 @@ export class ListeMembresComponent implements OnInit {
  
 
   delete(id:any){
-    this.opensweetalert1()
+    // this.opensweetalert1()
     this.adhServ.deleteAdherent(id).subscribe( data => {   
-      
+      this.opensweetalert2()
     this.affiche()
     this.router.navigate(['/liste-membres']);  
     },
