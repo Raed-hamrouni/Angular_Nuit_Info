@@ -7,8 +7,7 @@
             <img src="http://localhost:3000/{{Adherent.file.substring(12)}}"  width="150" class="">
             <br>
             <br>
-            <h4>{{Adherent.nom}} {{Adherent.prenom}} </h4>
-            <h2>{{Adherent.club}}</h2>
+            <h4>{{Adherent.nom |uppercase}} {{Adherent.prenom |uppercase}} </h4>
         
           </div>
                 
@@ -48,12 +47,18 @@
                   <p> {{Adherent.specialite}}</p>
                 </div>
             </div>
+            <div class="info_data">
               <div class="data">
                 <h4>Niveau d'étude</h4>
                 <p> {{Adherent.niveau}}</p>
               </div>
+              <div class="data">
+                <h4>Les Clubs </h4>
+                <p> {{Adherent.club}}</p>
+              </div>
+           
             </div>
-            
+           
           </div>
         
           
