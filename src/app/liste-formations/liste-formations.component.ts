@@ -75,7 +75,6 @@ export class ListeFormationsComponent implements OnInit {
   
   delete(id:any){
     this.formationservice.deleteFormation(id).subscribe( data => {   
-      
     this.affiche()
     this.router.navigate(['/listeFormations']);  
     },
@@ -115,7 +114,8 @@ opensweetalert3() {
     showCancelButton: true,
     confirmButtonColor: '#3085d6',
     cancelButtonColor: '#d33',
-    confirmButtonText: 'Oui, supprimer!',
+    confirmButtonText: 'Oui ',
     cancelButtonText: 'Annuler'
   })}
+
 }

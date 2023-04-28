@@ -8,31 +8,33 @@
       <button style="margin-left: 1280px; margin-top: -190px;" routerLink="/AjoutEvent" type="button" class="btn btn-info" > 
         <span class="fa fa-plus"></span>
       </button>
-<body style="margin-top: -5px;">
+<body style="margin-top: -1px;">
     <div class="card-group" style="margin-left: 310px;">
        
-        <div *ngFor="let formation of Formation | paginate : {itemsPerPage: 2, currentPage: p}" class="col-md3 my-2">
-            <div class="card" style="width: 15rem; height: 22rem;">
+        <div *ngFor="let formation of Formation | paginate : {itemsPerPage: 4, currentPage: p}" class="col-md3 my-2">
+            <div class="card" style="width: 15rem; height: 23rem;">
                 <img src="http://localhost:3000/{{formation.file.substring(12)}}" width="200" height="170px" style="margin-left: 20px;" class="circle">
                 <div class="card-body">
                     <h5 class="card-title" >{{formation.title}}</h5>
-                    <h6>{{formation.date}} </h6>
+                    <small class="text-muted"> assuré par : {{formation.formateur}}h</small>
+                    <h6>{{formation.date}} ~ {{formation.date_fin}} </h6>
                     <div class="card-footer">
                         <small class="text-muted">{{formation.heure}}h</small>
-                        <small style="margin-left: 80px;" class="text-muted">{{formation.prix}}</small>
+                        <small style="margin-left: 80px;" class="text-muted">{{formation.prix}} DT</small>
                       </div>
                       <p style="margin-top: 10px; margin-left: 40px;" >
-                        <button class="action-button btn-danger" type="button" (click)="opensweetalert1();delete(formation._id)" > 
+                        <button class="action-button btn-danger" type="button" (click)="opensweetalert3();delete(formation._id)" > 
                             <span class="fa fa-trash"></span>
                           </button>
+                         
                           <button  class="action-button btn-warning" type="button" routerLink="/updateFormation/{{formation._id}}" > 
                             <span class="fa fa-edit"></span>
                           </button>
-                <a routerLink="/detail/{{formation.id}}"  class="btn btn-light">
+                <!-- <a routerLink="/detail/{{formation.id}}"  class="btn btn-light">
                     <span class="fa fa-info"></span>
                     
-                </a>
-                <button  class="action-button btn" (click)="getList(id)" style="font-size:14px;">
+                </a> -->
+                <button  class="action-button btn-light" (click)="getList(id)" style="font-size:14px;">
                     <span class="fa fa-list" style="font-size: 20px;"></span>
               
                   </button>
