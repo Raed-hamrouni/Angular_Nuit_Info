@@ -33,6 +33,8 @@ import { UpdateAdherentComponent } from './update-adherent/update-adherent.compo
 import { PlanComponent } from './plan/plan.component';
 import { ListeFormationsComponent } from './liste-formations/liste-formations.component';
 import { AjouterFormationComponent } from './ajouter-formation/ajouter-formation.component';
+import { ParticipantComponent } from './participant/participant.component';
+
 // import { FullCalendarModule } from '@fullcalendar/angular';
 // import interactionPlugin from '@fullcalendar/interaction';
 // import dayGridPlugin from '@fullcalendar/daygrid';
@@ -67,6 +69,7 @@ import { AjouterFormationComponent } from './ajouter-formation/ajouter-formation
     PlanComponent,
     ListeFormationsComponent,
     AjouterFormationComponent,
+    ParticipantComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,6 +78,7 @@ import { AjouterFormationComponent } from './ajouter-formation/ajouter-formation
     ReactiveFormsModule,
     FormsModule,
     NgxPaginationModule,
+
     // FullCalendarModule,
 
 

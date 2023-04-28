@@ -1,5 +1,5 @@
 <app-navbar-supp></app-navbar-supp>
-<app-sidebar-responsable></app-sidebar-responsable>
+<app-sidebar-membre></app-sidebar-membre>
 
   
   <h3 style="margin-top: -17px;"><i class="fa fa-angle-double-right" style="margin-left: 280px; margin-top: -2px;"></i> Liste Des Formations</h3>
@@ -16,10 +16,10 @@
                           <th>Titre</th>
                           <th>Date </th>
                           <th>Heure
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <i class="fa fa-time" aria-hidden="true"></i>
                           </th>
                           <th>Date Fin  
-                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <i class="" aria-hidden="true"></i>
                           </th>
                           <th>Action  
                             <i class="" aria-hidden="true"></i>
@@ -34,7 +34,17 @@
                               <td>{{formation.heure}}</td>
                               <td>{{formation.date_fin}}</td>
                               <td>
-                            
+                                <div class="container">
+                                  <button  class="btn btn-light" (click)="participer();opensweetalert();" >
+                                    <span class="fa fa-star"></span>
+                              <strong>Participer</strong>    
+                                  </button>
+                                 
+                                
+                               
+                                    
+                                 
+                                </div>
                               </td>
                              
                           </tr>

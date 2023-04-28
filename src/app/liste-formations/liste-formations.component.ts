@@ -5,7 +5,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FormationService } from '../shared/formation.service';
 import Swal from 'sweetalert2';
-// import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { AdherentService } from '../shared/adherent.service';
 
 
 @Component({
@@ -17,6 +17,7 @@ export class ListeFormationsComponent implements OnInit {
   Formation!: any;
   router: any;
   id:any;
+  Adherent:any;
   p : number=1;
 
   dateDebut:any;
@@ -38,12 +39,13 @@ export class ListeFormationsComponent implements OnInit {
   form:any
   _id:any;
   closeResult = '';
-  constructor( private adhServ: FormationService,
+  constructor( private adhServ: AdherentService,
     private formationservice: FormationService,
     private authServ: AuthService,
     private http: HttpClient,
     private fb: FormBuilder,
-    private route: Router) 
+    private route: Router,
+) 
     { }
 
 
@@ -61,13 +63,21 @@ export class ListeFormationsComponent implements OnInit {
         },
       )
     }
+
+    getList(id:number){
+      this.adhServ.getAdherentByFormation(this.idEvent).subscribe((data:any)=>{
+        this.Adherent = data;
+        console.log("adherent BY FORMATION",this.Adherent);
+        
+      }) 
+    }
   
   
   delete(id:any){
     this.formationservice.deleteFormation(id).subscribe( data => {   
       
     this.affiche()
-    this.router.navigate(['/liste-formations']);  
+    this.router.navigate(['/listeFormations']);  
     },
     )
   }
@@ -98,7 +108,16 @@ opensweetalert3() {
     footer: 'Vérifier les Dates de formation'
   })
  }
-   
+ opensweetalert1(){
+  Swal.fire({
+    title: 'Êtes-vous sûr de vouloir supprimer ceci?',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Oui, supprimer!',
+    cancelButtonText: 'Annuler'
+  })}
 
 
 
