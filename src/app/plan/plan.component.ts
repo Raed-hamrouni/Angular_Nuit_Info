@@ -13,11 +13,13 @@ import Swal from 'sweetalert2';
 })
 export class PlanComponent implements OnInit {
   Formation!: any;
+  Adherent!: any;
   router: any;
   id:any;
+  _id:any;
   p : number=1;
-  idEvent:any
-  aid:any;
+  ida:any
+  idEvent:any;
   constructor( private adhServ: AdherentService,
     private formationservice: FormationService,
     private http: HttpClient,
@@ -26,12 +28,15 @@ export class PlanComponent implements OnInit {
     { }
 
   ngOnInit(): void {
+    this._id =(localStorage.getItem('CurrentUser') || '');
+    console.log("id membre ",this._id);
     this.affiche();
     this.formationservice.getFormation(this.id).subscribe( data => {
       console.log(data);
       this.Formation = data;
     }) 
   }
+
   affiche(){
     this.formationservice.getAllFormation().subscribe(
       res=>{
@@ -39,13 +44,14 @@ export class PlanComponent implements OnInit {
       },
     )
   }
-  participer() {
-    let e={event:this.idEvent}
-    this.adhServ.participer(this.aid,e).subscribe((res) => {
-console.log("goalllllll",this.idEvent);
-    });
-    console.log();
-  }
+   participer() {
+        let e={event:this.id}
+        this.adhServ.participer(this._id,e).subscribe((res) => {
+console.log("goalllllll",this.id);
+        });
+        console.log();
+      }
+
   opensweetalert() {
     Swal.fire({
       position: 'top-end',
@@ -55,5 +61,15 @@ console.log("goalllllll",this.idEvent);
       timer: 2000
     })
    }
+   opensweetalert1(){
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Your participation has been saved',
+      showConfirmButton: false,
+      timer: 2000
+    })
+  }
+
 
 }

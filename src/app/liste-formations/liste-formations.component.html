@@ -28,11 +28,7 @@
                           <button  class="action-button btn-warning" type="button" routerLink="/updateFormation/{{formation._id}}" > 
                             <span class="fa fa-edit"></span>
                           </button>
-                <!-- <a routerLink="/detail/{{formation.id}}"  class="btn btn-light">
-                    <span class="fa fa-info"></span>
-                    
-                </a> -->
-                <button  class="action-button btn-light" (click)="getList(id)" style="font-size:14px;">
+                <button  class="action-button btn-light"   routerLink="/Participant/{{formation._id}}"  (click)="getList(id)" style="font-size:14px;">
                     <span class="fa fa-list" style="font-size: 20px;"></span>
               
                   </button>

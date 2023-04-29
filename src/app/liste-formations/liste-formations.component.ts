@@ -71,7 +71,7 @@ export class ListeFormationsComponent implements OnInit {
     getList(id:number){
       this.adhServ.getAdherentByFormation(this.idEvent).subscribe((data:any)=>{
         this.Adherent = data;
-        console.log("adherent BY FORMATION",this.Adherent);
+        console.log("adherent BY FORMATION",this.Adherent.data);
         
       }) 
     }

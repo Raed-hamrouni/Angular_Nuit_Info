@@ -1,33 +1,7 @@
-<!-- 
-    <div class="modal-header"  style="background-color: #25857e;" >
-      <a href="" class="logo" style="font-size: 1px;" style="margin-top: 0px;">
-       
-        <img style="width: 140px;;margin-top: 1px; margin-left: 5px;" class="logo"
-        src="https://arsii.org/theme_assets/img/arsii-white.png" alt="logo"
-         >
-  </a>
-      <h4 class="modal-title" id="modal-basic-title" style="margin-left: 20px;">Liste des Participants</h4>
-      <a  class="btn-close" aria-label="Close"></a>
-    </div>
-    <div class="modal-body" style="width: 1900px;">
-      <form >
-        <div class="mb-6">
-   
-          <div class="input-group" *ngFor="let item of Adherent ; let i=index">
-            <div class="data" style="margin-left: 162px;">
-              <h3><i class="fa fa-check-square-o" aria-hidden="true" style="color:#25857e"></i>
-                {{Adherent[i].nom}} {{Adherent[i].prenom}} <br> </h3>
-                <h5> </h5>
-  
-          </div>
-          </div>
-        </div>
-      
-      </form>
-    </div> -->
-    
 
-    <h5 style="margin-left: 250px;margin-top: 20px; color: blueviolet;">Détail d'un Produit</h5>
+    
+<!-- 
+    <h5 style="margin-left: 250px;margin-top: 20px; color: blueviolet;">Participants</h5>
     <div>
    
       
@@ -58,7 +32,33 @@
       </div>
       
       <ng-template #vide> <h2 style="color: red;">Tableau vide </h2></ng-template>
-  
+   -->
 
+<!-- <app-navbar-supp></app-navbar-supp>
+<app-sidebar-responsable></app-sidebar-responsable> -->
 
+   <div class="modal-header"  style="background-color: #25857e;" >
+    <a href="" class="logo" style="font-size: 1px;" style="margin-top: 0px;">
+     
+      
+</a>
+    <h4 class="modal-title" id="modal-basic-title" style="margin-left: 20px;">Liste des Participants</h4>
+  </div>
+  <div class="modal-body" style="width: 90px;">
+    <form >
+      <div class="mb-6">
+ 
+        <div class="input-group" *ngFor="let item of Adherent ; let i=index">
+          <div class="data" style="margin-left: 20px;">
+            <h3><i class="fa fa-check-square-o" aria-hidden="true" style="color:#25857e"></i>
+              {{Adherent[i].nom}} {{Adherent[i].prenom}} <br> </h3>
+              <h5> </h5>
 
+        </div>
+        </div>
+      </div>
+    
+    </form>
+  </div>
+
+ 

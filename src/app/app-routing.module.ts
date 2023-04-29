@@ -50,7 +50,7 @@ const routes: Routes = [
     { path:'planEvent',component:PlanComponent},
     { path:'listeFormations',component:ListeFormationsComponent},
     { path:'AjoutEvent',component:AjouterFormationComponent},
-    { path:'Participant',component:ParticipantComponent},
+    { path:'Participant/:id',component:ParticipantComponent},
     { path:'updateFormation/:id',component:UpdateFormationComponent},
 
 

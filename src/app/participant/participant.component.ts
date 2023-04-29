@@ -9,8 +9,12 @@ import { AdherentService } from '../shared/adherent.service';
   styleUrls: ['./participant.component.css']
 })
 export class ParticipantComponent implements OnInit {
+
   Adherent:any
   idEvent:any
+  id:any
+  _id:any
+  _idEvent:any
   constructor(private router:Router ,
     private formationServ: FormationService,
     private fb: FormBuilder,
@@ -19,20 +23,17 @@ export class ParticipantComponent implements OnInit {
  ) { }
 
  ngOnInit(): void {
-  let id:number;
-  this.ar.paramMap.subscribe((params : Params)=>{
-      id=+params.get('id')
-      this.adhServ.getAdherentByFormation(id).subscribe(data=>{ this.Adherent = data; }
-      )
-    }
-  )
+  this.adhServ.getAdherent(this.id).subscribe( data => {
+    console.log(data);
+    this.Adherent = data;
+  })
  
 }
-  getList(id:number){
-    this.adhServ.getAdherentByFormation(this.idEvent).subscribe((data:any)=>{
-      this.Adherent = data;
-      console.log("adherent BY FORMATION",this.Adherent);
-      
-    }) 
-  }
+getList(_id:number){
+  this.adhServ.getAdherentByFormation(this.idEvent).subscribe((data:any)=>{
+    this.Adherent = data;
+    console.log("adherent BY FORMATION",this.Adherent);
+    
+  }) 
+}
 }

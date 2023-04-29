@@ -25,7 +25,7 @@ export class SidebarMembreComponent implements OnInit {
   ngOnInit(): void  {
      
     this.id =(localStorage.getItem('CurrentUser') || '');
-    console.log("id entreprise ",this.id);
+    console.log("id membre",this.id);
     this.adhService.getAdherent(this.id).subscribe( data => { 
       this.Adherent = data;
     })}
