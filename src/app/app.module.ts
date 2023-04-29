@@ -35,6 +35,8 @@ import { ListeFormationsComponent } from './liste-formations/liste-formations.co
 import { AjouterFormationComponent } from './ajouter-formation/ajouter-formation.component';
 import { ParticipantComponent } from './participant/participant.component';
 import { UpdateFormationComponent } from './update-formation/update-formation.component';
+import { PipePipe } from './pipe.pipe';
+import { SortPipe } from './sort.pipe';
 
 // import { FullCalendarModule } from '@fullcalendar/angular';
 // import interactionPlugin from '@fullcalendar/interaction';
@@ -72,6 +74,8 @@ import { UpdateFormationComponent } from './update-formation/update-formation.co
     AjouterFormationComponent,
     ParticipantComponent,
     UpdateFormationComponent,
+    PipePipe,
+    SortPipe,
   ],
   imports: [
     BrowserModule,

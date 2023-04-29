@@ -76,7 +76,13 @@ export class ListeFormationsComponent implements OnInit {
       }) 
     }
   
+    set texte(s:string){
+      this.Adherent=this.filtrer(s);
+    } 
   
+    filtrer(s:string){
+      return this.Adherent.filter((el:any)=>el.nom.indexOf(s)!=-1)
+    }
   delete(id:any){
     this.formationservice.deleteFormation(id).subscribe( data => {   
     this.affiche()

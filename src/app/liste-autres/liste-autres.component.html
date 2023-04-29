@@ -4,9 +4,9 @@
   
   <h3 style="margin-top: -17px;"><i class="fa fa-angle-double-right" style="margin-left: 280px; margin-top: -2px;"></i> Liste Des Clubs</h3>
   <div _ngcontent-roy-c3="">
-           <div >
+           <!-- <div >
                 <input type="text" class="form-control" [(ngModel)]="term"   placeholder="Search"  style="height: 30px; width: 400px; margin-left: 280px; margin-top: 25px;" > 
-                  </div>
+                  </div> -->
                         
              <table class="table table-striped" style="margin-top: 8%;" >
                   
@@ -24,7 +24,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                          <tr *ngFor="let responsable of Responsable | paginate : {itemsPerPage: 2, currentPage: p} " >
+                          <tr *ngFor="let responsable of Responsable | paginate : {itemsPerPage: 3, currentPage: p} " >
                             <img src="http://localhost:3000/{{responsable.file.substring(12)}}"  width="130" style="margin-left: 50px;" class="img-circle">
                               <td>{{responsable.nomR}} </td>
                               <td>{{responsable.nomClub}}</td>
@@ -37,7 +37,7 @@
                     </table>
   
   
-                    <div class="pagination" style="margin-top: 350px;">
+                    <div class="pagination" style="margin-top: 400px;">
                     <pagination-controls (pageChange)="p = $event"></pagination-controls>
                   </div>
                   </div>

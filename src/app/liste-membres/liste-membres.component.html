@@ -79,18 +79,18 @@
                     <tr>
                       <th>Photo</th>
                       <th><i class="fa fa-user" aria-hidden="true"></i>  Nom</th>
-                      <th>Prénom</th>
+                     
                       <th><i class="fa fa-envelope" aria-hidden="true"></i>  email
                   
                       </th>
-                      <th>Action</th>
+                      <th style="width:80px;">Action</th>
                       </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let Adherents of Adherent  | paginate : {itemsPerPage: 2, currentPage: p}" >
                           <img src="http://localhost:3000/{{Adherents.file.substring(12)}}" width="110" style="margin-left: 90px;" class="circle">
-                            <td>{{Adherents.nom }} </td>
-                            <td>{{Adherents.prenom}}</td>
+                            <td>{{Adherents.nom }} {{Adherents.prenom}} </td>
+                           
                             
                             <td>{{Adherents.email}}</td>
                            
@@ -102,7 +102,7 @@
                 
                               </button>
                              
-                              <button class="action-button btn-secondary" [routerLink]="['/update',Adherents._id]"> <span class="fa fa-edit"></span></button>
+                              <!-- <button class="action-button btn-secondary" [routerLink]="['/update',Adherents._id]"> <span class="fa fa-edit"></span></button> -->
                               <button  class="action-button btn-danger" type="button" (click)="opensweetalert2();delete(Adherents.id)" > 
                                 <span class="fa fa-trash"></span>
                               </button>

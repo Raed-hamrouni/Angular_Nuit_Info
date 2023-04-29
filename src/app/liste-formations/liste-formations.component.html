@@ -1,19 +1,21 @@
 
 <app-navbar-supp></app-navbar-supp>
 <app-sidebar-responsable></app-sidebar-responsable>
-<!DOCTYPE html>
-<h3><i class="fa fa-angle-double-right" style="margin-left: 280px; margin-top: -180px;"></i> Liste des Formations</h3>
+
+<h3><i class="fa fa-angle-double-right" style="margin-left: 280px; margin-top: -10px;"></i> Liste des Formations</h3>
+<input class="form-control" type="search"  placeholder="Search" aria-label="Search" style="margin-left: 1100px; width: 200px; margin-top: -40px;"
+[(ngModel)]="texte"  >
       <button style="margin-left: 1280px; margin-top: -190px;" routerLink="/AjoutEvent" type="button" class="btn btn-info" > 
         <span class="fa fa-plus"></span>
       </button>
 <body style="margin-top: -1px;">
-    <div class="card-group" style="margin-left: 310px;">
+    <div class="card-group" style="margin-left: 310px;margin-top: -2px;">
        
         <div *ngFor="let formation of Formation | paginate : {itemsPerPage: 4, currentPage: p}" class="col-md3 my-2">
             <div class="card" style="width: 15rem; height: 23rem;">
                 <img src="http://localhost:3000/{{formation.file.substring(12)}}" width="200" height="170px" style="margin-left: 20px;" class="circle">
                 <div class="card-body">
-                    <h5 class="card-title" >{{formation.title}}</h5>
+                    <h5 class="card-title" >{{formation.title| pipe:"":"-"}}</h5>
                     <small class="text-muted"> assuré par : {{formation.formateur}}</small>
                     <h6>{{formation.date}} ~ {{formation.date_fin}}</h6>
                     <div class="card-footer">
