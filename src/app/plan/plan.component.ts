@@ -20,6 +20,9 @@ export class PlanComponent implements OnInit {
   p : number=1;
   ida:any
   idEvent:any;
+  _idEvent:any;
+  event:any;
+
   constructor( private adhServ: AdherentService,
     private formationservice: FormationService,
     private http: HttpClient,
@@ -31,9 +34,10 @@ export class PlanComponent implements OnInit {
     this._id =(localStorage.getItem('CurrentUser') || '');
     console.log("id membre ",this._id);
     this.affiche();
-    this.formationservice.getFormation(this.id).subscribe( data => {
+
+    this.formationservice.getFormation(this.idEvent).subscribe( data => {
       console.log(data);
-      this.Formation = data;
+      this.event = data;
     }) 
   }
 
@@ -45,9 +49,9 @@ export class PlanComponent implements OnInit {
     )
   }
    participer() {
-        let e={event:this.id}
+        let e={event:this.idEvent}
         this.adhServ.participer(this._id,e).subscribe((res) => {
-console.log("goalllllll",this.id);
+console.log("goalllllll",this.idEvent);
         });
         console.log();
       }
@@ -65,7 +69,7 @@ console.log("goalllllll",this.id);
     Swal.fire({
       position: 'top-end',
       icon: 'success',
-      title: 'Your participation has been saved',
+      title: 'Ta participation est bien enregistrée',
       showConfirmButton: false,
       timer: 2000
     })
