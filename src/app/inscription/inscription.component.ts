@@ -9,17 +9,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./inscription.component.css']
 })
 export class InscriptionComponent implements OnInit {
-  // selectedClubs = {
-    
-  // };
 
-  // clubs: Array<any> = [
-  //   { value: 'Arsii', label: 'Arsii' },
-  //   { value: 'Enactus', label: 'Enactus' },
-  //   { value: 'Securinets', label: 'Securinets' },
-  //   { value: 'Fancom', label: 'Fancom' },
-  //   { value: '3zéro', label: '3zero' }
-  // ];
   adherentForm!: FormGroup
   loginResponse:any
   constructor(  private router: Router,
@@ -36,12 +26,8 @@ export class InscriptionComponent implements OnInit {
         password:['',Validators.required],
         nom:['',Validators.required],
         prenom:['',Validators.required],  
-        civilite:['',Validators.required],
-        niveau:['',Validators.required],
-        cycle:['',Validators.required],
-        telephone:['',Validators.required],
-        specialite:['',Validators.required],
-        club:[''],
+        civilite:['',Validators.required],      
+        telephone:['',Validators.required],       
         file:[''],
       }
 

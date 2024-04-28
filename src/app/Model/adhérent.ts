@@ -5,11 +5,7 @@ export interface Adhérent {
     email:string;
     password:string;
     confirmePassword:string;
-    niveau:string;
-    cycle:string;
     telephone:string;
-    specialite:String;
-    cv:string;
     file:string;
 
 }

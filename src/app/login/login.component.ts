@@ -24,19 +24,7 @@ export class LoginComponent implements OnInit {
     private adminServ: AdminService,
     private authServ: AuthService,
     private ResponsableService:ResponsableService,) { 
-// this.loginForm = this.fb.group({
-//         email: [
-//           "",
-//           Validators.compose([
-//             Validators.pattern(
-//               "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]{0,10})*@[A-Za-z0-9]+(\\.[A-Za-z0-9]{0,10})*(\\.[A-Za-z]{0,5})$"
-//             ),
-//             Validators.required,
-//           ]),
-//         ],
-//         password: ["", Validators.required],
-       
-//       });
+
 let formControls = {
   email: new FormControl('', [
     Validators.required,
@@ -108,13 +96,5 @@ login() {
  
 }
  
-// opensweetalert() {
-//   Swal.fire({
-//     position: 'top',
-//     icon: 'warning',
-//     title: 'Oops...',
-//     text: 'Invalid Email or Password !',
-//     showConfirmButton: false,
-//   })
-//  }
+
 }

@@ -1,4 +1,41 @@
-/* .btn{
-    background-color: #eee;
-    top: 5%;
-} */
+.custom-navbar {
+    background-color: #747070; /* Updated background color */
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 65px;
+}
+
+.nav-links {
+    margin-left: auto;
+}
+
+.nav-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #096509; /* Updated button background color */
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0e151d; /* Darker shade on hover */
+}
