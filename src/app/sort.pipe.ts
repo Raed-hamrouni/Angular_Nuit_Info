@@ -1,14 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Formation } from './Model/formation';
+import { Seance } from './Model/seance';
 @Pipe({
   name: 'sort'
 })
 export class SortPipe implements PipeTransform {
 
-  transform(value: Formation[]): Formation[] {
+  transform(value: Seance[]): Seance[] {
     value.sort((a,b)=>{
-      if(a.date<b.date_fin) return -1;
-      else if(a.date>b.date_fin) return 1;
+      if(a.startTime<b.endTime) return -1;
+      else if(a.startTime>b.endTime) return 1;
       else return 0
     })
     return value;

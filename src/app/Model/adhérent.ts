@@ -1,11 +1,12 @@
 export interface Adhérent {
     id:number;
-    nom:string;
-    prenom:string;
     email:string;
     password:string;
-    confirmePassword:string;
+    civilite:string;
+    nom:string;
+    prenom:string;
     telephone:string;
     file:string;
+  
 
 }

@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { FormationService } from '../shared/formation.service';
+import { SeanceService } from '../shared/seance.service';
 import { AdherentService } from '../shared/adherent.service';
 import Swal from 'sweetalert2';
+import { ResponsableService } from '../shared/responsable.service';
 
 @Component({
   selector: 'app-plan',
@@ -12,7 +13,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./plan.component.css']
 })
 export class PlanComponent implements OnInit {
-  Formation!: any;
+  Seance!: any;
   Adherent!: any;
   router: any;
   id:any;
@@ -22,9 +23,14 @@ export class PlanComponent implements OnInit {
   idEvent:any;
   _idEvent:any;
   event:any;
+  Responsable!: any;
+  adherent_id:any;
+  seance_id:any;
+  seance:any;
 
   constructor( private adhServ: AdherentService,
-    private formationservice: FormationService,
+    private responsableService: ResponsableService,
+    private seanceservice: SeanceService,
     private http: HttpClient,
     private fb: FormBuilder,
     private route: Router) 
@@ -35,26 +41,54 @@ export class PlanComponent implements OnInit {
     console.log("id membre ",this._id);
     this.affiche();
 
-    this.formationservice.getFormation(this.idEvent).subscribe( data => {
+    this.seanceservice.getSeance(this.idEvent).subscribe( data => {
       console.log(data);
       this.event = data;
     }) 
   }
+  getRespo(_id:number){
+    this.responsableService.getResponsable(this.idEvent).subscribe((data:any)=>{
+      this.Adherent = data;
+      console.log("adherent BY SEANCE",this.Adherent);
+      
+    }) 
+  }
 
   affiche(){
-    this.formationservice.getAllFormation().subscribe(
+    this.seanceservice.getAllSeance().subscribe(
       res=>{
-        this.Formation=res
+        this.Seance=res
       },
     )
   }
-   participer() {
-        let e={event:this.idEvent}
-        this.adhServ.participer(this._id,e).subscribe((res) => {
-console.log("goalllllll",this.idEvent);
-        });
-        console.log();
+  participer(seanceId: string) {
+ 
+    const adherent_id = localStorage.getItem('CurrentUser'); 
+    if (!adherent_id) {
+      console.error("Adherent ID not found.");
+      return; 
+    }
+  
+    const requestBody = {
+      adherent_id: adherent_id,
+      seance_id: seanceId
+    };
+  
+    this.adhServ.participer(requestBody).subscribe(
+      (res) => {
+        console.log("Response from backend:", res);
+       
+      },
+      (error) => {
+        console.error("Error from backend:", error);
+      
       }
+    );
+  }
+  
+  
+  
+  
 
   opensweetalert() {
     Swal.fire({

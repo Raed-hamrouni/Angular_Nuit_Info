@@ -1,10 +1,9 @@
 export interface Responsable {
     id:number;
-    nomClub:string;
-    nomResp:string;
     emailEnt:string;
     password:string;
+    CoachOf:string;
+    nomR:string;
     telEnt:string;
-    adresse:string;
 }
 

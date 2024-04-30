@@ -2,7 +2,7 @@
 <app-navbar-supp></app-navbar-supp>
 <app-sidebar-responsable></app-sidebar-responsable>
 
-<h3><i class="fa fa-angle-double-right" style="margin-left: 280px; margin-top: -10px;"></i> Liste des Formations</h3>
+<h3><i class="fa fa-angle-double-right" style="margin-left: 280px; margin-top: -10px;"></i> Liste des Seances</h3>
 <input class="form-control" type="search"  placeholder="Search" aria-label="Search" style="margin-left: 1100px; width: 200px; margin-top: -40px;"
 [(ngModel)]="texte"  >
       <button style="margin-left: 1280px; margin-top: -190px;" routerLink="/AjoutEvent" type="button" class="btn btn-info" > 
@@ -11,26 +11,26 @@
 <body style="margin-top: -1px;">
     <div class="card-group" style="margin-left: 310px;margin-top: -2px;">
        
-        <div *ngFor="let formation of Formation | paginate : {itemsPerPage: 4, currentPage: p}" class="col-md3 my-2">
+        <div *ngFor="let seance of Seance | paginate : {itemsPerPage: 4, currentPage: p}" class="col-md3 my-2">
             <div class="card" style="width: 15rem; height: 23rem;">
-                <img src="http://localhost:3000/{{formation.file.substring(12)}}" width="200" height="170px" style="margin-left: 20px;" class="circle">
+               
                 <div class="card-body">
-                    <h5 class="card-title" >{{formation.title| pipe:"":"-"}}</h5>
-                    <small class="text-muted"> assuré par : {{formation.formateur}}</small>
-                    <h6>{{formation.date}} ~ {{formation.date_fin}}</h6>
+                    <h5 class="card-title" >{{seance.startTime| pipe:"":"-"}}</h5>
+                    <small class="text-muted"> assuré par : {{seance.coach}}</small>
+                    <h6>{{seance.day}} ~ {{seance.endTime}}</h6>
                     <div class="card-footer">
-                        <small class="text-muted">{{formation.heure}}h</small>
-                        <small style="margin-left: 80px;" class="text-muted">{{formation.prix}} DT</small>
+                        <small class="text-muted">{{seance.heure}}h</small>
+                        <small style="margin-left: 80px;" class="text-muted"> DT</small>
                       </div>
                       <p style="margin-top: 10px; margin-left: 40px;" >
-                        <button class="action-button btn-danger" type="button" (click)="opensweetalert3();delete(formation._id)" > 
+                        <!-- <button class="action-button btn-danger" type="button" (click)="opensweetalert3();delete(seance._id)" > 
                             <span class="fa fa-trash"></span>
-                          </button>
+                          </button> -->
                          
-                          <button  class="action-button btn-warning" type="button" routerLink="/updateFormation/{{formation._id}}" > 
+                          <button  class="action-button btn-warning" type="button" routerLink="/updateFormation/{{seance._id}}" > 
                             <span class="fa fa-edit"></span>
                           </button>
-                <button  class="action-button btn-light"   routerLink="/Participant/{{formation._id}}"  (click)="getList(id)" style="font-size:14px;">
+                <button  class="action-button btn-light"   routerLink="/Participant/{{seance._id}}"  (click)="getList(id)" style="font-size:14px;">
                     <span class="fa fa-list" style="font-size: 20px;"></span>
               
                   </button>
@@ -49,39 +49,3 @@
 
 
 
-  <!-- ******************************************************Modal liste participant ****************************************************** -->
-  <!-- <ng-template #content4 let-modal  >
-    <div class="modal-header"  style="background-color: #25857e;" >
-      <a href="" class="logo" style="font-size: 1px;" style="margin-top: 0px;">
-       
-        <img style="width: 140px;;margin-top: 1px; margin-left: 5px;" class="logo"
-        src="https://arsii.org/theme_assets/img/arsii-white.png" alt="logo"
-         >
-  </a>
-      <h4 class="modal-title" id="modal-basic-title" style="margin-left: 20px;">Liste des Participants</h4>
-      <a  class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></a>
-    </div>
-    <div class="modal-body" style="width: 1900px;">
-      <form >
-        <div class="mb-6">
-   
-          <div class="input-group" *ngFor="let item of Adherent ; let i=index">
-            <div class="data" style="margin-left: 162px;">
-              <h3><i class="fa fa-check-square-o" aria-hidden="true" style="color:#25857e"></i>
-                {{Adherent[i].nom}} {{Adherent[i].prenom}} <br> </h3>
-                <h5> </h5>
-  
-          </div>
-          </div>
-        </div>
-      
-      </form>
-    </div>
-  
-   
-  
-  </ng-template>
-  
-  
-  
-  -->

@@ -5,12 +5,13 @@ import { AdminService } from '../shared/admin.service';
 import { AuthService } from '../shared/auth.service';
 import { AdherentService } from '../shared/adherent.service';
 import { ResponsableService } from '../shared/responsable.service';
+
 @Component({
-  selector: 'app-profil-club',
-  templateUrl: './profil-club.component.html',
-  styleUrls: ['./profil-club.component.css']
+  selector: 'app-profil-coach',
+  templateUrl: './profil-coach.component.html',
+  styleUrls: ['./profil-coach.component.css']
 })
-export class ProfilClubComponent implements OnInit {
+export class ProfilCoachComponent implements OnInit {
   Responsable!: any;
   id:any;
 
@@ -22,6 +23,7 @@ export class ProfilClubComponent implements OnInit {
     private adhServ: AdherentService,
     private responsableService: ResponsableService
   ) { }
+
 
   ngOnInit(): void {
     this. id =(localStorage.getItem('CurrentUser') || '');

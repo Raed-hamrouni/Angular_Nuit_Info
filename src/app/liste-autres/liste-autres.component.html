@@ -2,7 +2,7 @@
 <app-sidebar-responsable></app-sidebar-responsable>
 
   
-  <h3 style="margin-top: -17px;"><i class="fa fa-angle-double-right" style="margin-left: 280px; margin-top: -2px;"></i> Liste Des Clubs</h3>
+  <h3 style="margin-top: -17px;"><i class="fa fa-angle-double-right" style="margin-left: 280px; margin-top: -2px;"></i> List Of Coachs</h3>
   <div _ngcontent-roy-c3="">
            <!-- <div >
                 <input type="text" class="form-control" [(ngModel)]="term"   placeholder="Search"  style="height: 30px; width: 400px; margin-left: 280px; margin-top: 25px;" > 
@@ -25,9 +25,9 @@
                       </thead>
                       <tbody>
                           <tr *ngFor="let responsable of Responsable | paginate : {itemsPerPage: 3, currentPage: p} " >
-                            <img src="http://localhost:3000/{{responsable.file.substring(12)}}"  width="130" style="margin-left: 50px;" class="img-circle">
+                          
                               <td>{{responsable.nomR}} </td>
-                              <td>{{responsable.nomClub}}</td>
+                              <td>{{responsable.coachOf}}</td>
                               <td>{{responsable.emailEnt}}</td>
                               <td>{{responsable.telEnt}}</td>
                              

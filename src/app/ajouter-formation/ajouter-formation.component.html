@@ -40,11 +40,11 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
 
                                 <div class="form-group">
                                   
-                                    <label for="name" class="control-label">Nom de Formation(*) :</label>
+                                    <label for="name" class="control-label">Day(*) :</label>
 
-                                    <input type="text" class="form-control" name="title"  
-                                    formControlName="title"  placeholder="Entrez Votre Nom"
-                                   [ngClass]="{'is-invalid':formationForm.get('title')!.touched && !formationForm.get('title')!.valid}">
+                                    <input type="text" class="form-control" name="day"  
+                                    formControlName="day"  placeholder="Entrez Votre Nom"
+                                   [ngClass]="{'is-invalid':formationForm.get('day')!.touched && !formationForm.get('day')!.valid}">
                                     
     
                                     
@@ -57,11 +57,11 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                             <div style="margin-top:15px;" class="col-md-6">
 
                                 <div class="form-group">
-                                    <label for="name" class="control-label">Date Début(*) :</label>
+                                    <label for="name" class="control-label">Start Time(*) :</label>
 
-                                    <input type="date" class="form-control" name="date"  
-                                    formControlName="date"  placeholder="Entrez Votre Nom"
-                                   [ngClass]="{'is-invalid':formationForm.get('date')!.touched && !formationForm.get('date')!.valid}">
+                                    <input type="time" class="form-control" name="startTime"  
+                                    formControlName="startTime"  placeholder="Entrez Votre Nom"
+                                   [ngClass]="{'is-invalid':formationForm.get('startTime')!.touched && !formationForm.get('startTime')!.valid}">
                                     
     
                                 </div>
@@ -70,11 +70,11 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                             <div style="margin-top:15px;" class="col-md-6">
 
                                 <div class="form-group">
-                                    <label for="date_fin" class="control-label">Date Fin (*) :</label>
+                                    <label for="date_fin" class="control-label">End Time (*) :</label>
 
-                                    <input id="prenom" type="date" class="form-control" name="date_fin" 
-                                    formControlName="date_fin"  placeholder="Entrez Votre Prénom"
-                                    [ngClass]="{'is-invalid':formationForm.get('date_fin')!.touched && !formationForm.get('date_fin')!.valid}">
+                                    <input id="prenom" type="time" class="form-control" name="endTime" 
+                                    formControlName="endTime"  placeholder="Entrez Votre Prénom"
+                                    [ngClass]="{'is-invalid':formationForm.get('endTime')!.touched && !formationForm.get('endTime')!.valid}">
     
                                 </div>
 
@@ -84,87 +84,20 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
 
                              
                                 <div class="form-group">
-                                    <label class="control-label">Heure (*) :</label>
+                                    <label class="control-label">Coach (*) :</label>
 
-                                    <input  name="heure" type="time" class="form-control" placeholder="Entrez Votre Numéro"
-                                    formControlName="heure" 
-                                    [ngClass]="{'is-invalid':formationForm.get('heure')!.touched && !formationForm.get('heure')!.valid}"
+                                    <input  name="coach" type="text" class="form-control" placeholder="Entrez Votre Numéro"
+                                    formControlName="coach" 
+                                    [ngClass]="{'is-invalid':formationForm.get('coach')!.touched && !formationForm.get('coach')!.valid}"
                                     >
                                 </div>
 
                             </div>
-                            <div style="margin-top:15px;" class="col-md-6">
-
-                                <div class="form-group">
-                                    <label for="email" class="control-label">Durée (*) :</label>
-
-                                    <input type="text" class="form-control" name="email"
-                                    formControlName="duree"  placeholder="Entrez la durée du formation"
-                                    [ngClass]="{'is-invalid':formationForm.get('duree')!.touched && !formationForm.get('duree')!.valid}">
-                                   
-                                </div>
-
-                            </div>
-                            <div style="margin-top:15px;" class="col-md-6">
-
-                                <div class="form-group">
-                                    <label for="formateur" class="control-label">Formateur(*) :</label>
-
-
-                                    <input  type="text" class="form-control" name="formateur"   placeholder="Entrez le nom de formateur"
-                                    formControlName="formateur" 
-                                    [ngClass]="{'is-invalid':formationForm.get('formateur')!.touched && !formationForm.get('formateur')!.valid}">
-    
-                                </div>
-
-                            </div>
-                        </div>
-                        <div style="margin-top:15px;" class="studentsection">
-
-                            <div class="row">
-                                <div class="col-md-6">
-
-                                    <div class="form-group">
-                                        <label class="control-label">Prix (*) :</label>
-
-                                        <input type="text" pattern="[1-9][0-9]{0,2}" name="prix" type="text" class="form-control col-md-12" placeholder=""  style="height: 39px"
-                                        formControlName="prix" 
-                                    [ngClass]="{'is-invalid':formationForm.get('prix')!.touched && !formationForm.get('prix')!.valid}">
-                                    
-                                    
-                                    
-                                </div>
-
-                                </div>
-
-                                <div class="col-md-6">
-
-                                    <div class="form-group">
-                                        <label class="control-label">Lieu (*) :</label>
-
-                                        <input type="text" id="lieu" name="lieu" type="text" class="form-control" placeholder="" style="height: 39px;"
-                                        formControlName="lieu" 
-                                    [ngClass]="{'is-invalid':formationForm.get('lieu')!.touched && !formationForm.get('lieu')!.valid}">
                         
                           
-                                </div>
-
-                                </div>
-                            </div>
-
-                            
-
                         </div>
-                        <div class="form-group">
-                            <label class="control-label">Affiche de l'événement:</label>
-
-                            <input type="file" name="file" id="file" class="form-control col-md-12" style="height: 35px;" 
-                            formControlName="file" placeholder="Entrez Votre Photo" (change)="onUpload($event)"
-                            >
-                            
-                            
-                        
-                        </div>
+                      
+                  
 
                         <div style="margin-top:15px;display:none;" class="prosection">
 
@@ -179,7 +112,7 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                         </div>
                          <div style="margin-top:60px;" class="form-group row mb-0">
                             <div class="col-md-6 offset-md-5">
-                                <button class="btn btn-secondary"  [disabled]=!formationForm.valid  (click)="createFormation()">Envoyer</button>
+                                <button class="btn btn-secondary"  [disabled]=!formationForm.valid  (click)="createSeance()">Envoyer</button>
 
                             </div>
                         </div>

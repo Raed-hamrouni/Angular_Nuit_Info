@@ -19,67 +19,44 @@
   
                 <div class="row">
                     <div class="col-lg-6">
-                        <label for="title">Nom</label>
-                        <input type="text" name="title" class="form-control"  id="title" 
-                       [(ngModel)] ="Formation.title" >
+                        <label for="day">day</label>
+                        <input type="text" name="day" class="form-control"  id="day" 
+                       [(ngModel)] ="Seance.day" >
                     </div>
   
                     <div class="col-lg-6">
-                        <label for="prenom">Date Début</label>
-                        <input type="date" name="date" class="form-control" id="date" 
-                        [(ngModel)] ="Formation.date" >
+                        <label for="startTime">start Time</label>
+                        <input type="time" name="startTime" class="form-control" id="startTime" 
+                        [(ngModel)] ="Seance.startTime" >
                     </div>
                     <div class="col-lg-6">
-                        <label for="fname">Date Fin</label>
-                        <input type="date" name="date_fin" class="form-control" id="date_fin" 
-                        [(ngModel)] ="Formation.date_fin" >
+                        <label for="endTime">end Time</label>
+                        <input type="time" name="endTime" class="form-control" id="endTime" 
+                        [(ngModel)] ="Seance.endTime" >
                         </div>
                         <div class="col-lg-6">
-                            <label for="fname">Heure</label>
-                            <input type="time" name="heure" class="form-control"  id="heure" 
-                            [(ngModel)] ="Formation.heure" >
+                            <label for="coach">Coach</label>
+                            <input type="text" name="coach" class="form-control"  id="coach" 
+                            [(ngModel)] ="Seance.coach" >
                         </div>
                 </div>
                 <div class="row">
                     
   
-                    <div class="col-lg-6">
-                        <label for="fname">Duree</label>
-                        <input  [(ngModel)] ="Formation.duree" name="duree" class="form-control"  id="duree" style="height: 35px; font-size:16px">
-                
-                    </div>
-                    <div class="col-lg-6">
-                        <label for="formateur">Formateur </label>
-                        <input type="text" name="formateur" class="form-control"  id="formateur" style="height: 35px; font-size:16px"
-                        [(ngModel)] ="Formation.formateur">
-                       
-                    </div>
+                  
                 </div>
                 <div class="row">
                
 
-                <div class="col-lg-6">
-                    <label for="specialite">Prix</label>
-                    <input type="text" name="prix" class="form-control" id="prix" 
-                    [(ngModel)] ="Formation.prix">
-                </div>
 <br>
 <br>
 <br>
-                <div class="col-lg-12">
-                    <label class="control-label">Affiche</label>
-                    <img src="http://localhost:3000/{{Formation.file.substring(12)}}" alt="user" style="margin-left:490px ; margin-top: -50px;" width="90" class="img-circle"  [(ngModel)] ="Formation.file">
-                    <input   class="form-control"  type="file" name="file" id="file" class="form-control col-md-12" style="height: 35px;" 
-                    
-                    
-                    [(ngModel)] ="Formation.file">
-                    
-                </div>
+             
             
                 </div>
                 
 <br>
-<button (click)="update(Formation)" class = "btn" type ="button" style="height:35px ; margin-top: 5px;" > Enregistrer </button>
+<button (click)="update(Seance)" class = "btn" type ="button" style="height:35px ; margin-top: 5px;" > Enregistrer </button>
             </form>
             </div>
   

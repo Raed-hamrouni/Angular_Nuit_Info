@@ -3,7 +3,7 @@ import { AuthService } from '../shared/auth.service';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { FormationService } from '../shared/formation.service';
+import { SeanceService } from '../shared/seance.service';
 import Swal from 'sweetalert2';
 import { AdherentService } from '../shared/adherent.service';
 import { ResponsableService } from '../shared/responsable.service';
@@ -15,34 +15,31 @@ import { ResponsableService } from '../shared/responsable.service';
   styleUrls: ['./liste-formations.component.css']
 })
 export class ListeFormationsComponent implements OnInit {
-  Formation!: any;
+  Seance!: any;
   router: any;
   id:any;
   Adherent:any;
   p : number=1;
-
-  dateDebut:any;
-  formation:any
+  seance:any
   year :any;
   title:any
   date:any
   idEvent:any
-  heure:any
-  duree:any
   loginResponse :any;
   loginResponse2:any
   loginResponse4:any;
-  formateur:any
+  coach:any
   prix:any
-  file:any
-  date_fin: any;
-  lieu: any;
+  endTime: any;
+  startTime: any;
+  day: any;
+
   form:any
   _id:any;
   closeResult = '';
   Responsable:any;
   constructor( private adhServ: AdherentService,
-    private formationservice: FormationService,
+    private seanceService: SeanceService,
     private authServ: AuthService,
    private responsableService: ResponsableService,
     private http: HttpClient,
@@ -55,21 +52,21 @@ export class ListeFormationsComponent implements OnInit {
   ngOnInit(): void {
     
       this.affiche();
-      this.formationservice.getFormation(this.id).subscribe( data => {
+      this.seanceService.getSeance(this.id).subscribe( data => {
         console.log(data);
-        this.Formation = data;
+        this.Seance = data;
       }) 
     }
     affiche(){
-      this.formationservice.getAllFormation().subscribe(
+      this.seanceService.getAllSeance().subscribe(
         res=>{
-          this.Formation=res
+          this.Seance=res
         },
       )
     }
 
     getList(id:number){
-      this.adhServ.getAdherentByFormation(this.idEvent).subscribe((data:any)=>{
+      this.adhServ.getAdherentBySeance(this.idEvent).subscribe((data:any)=>{
         this.Adherent = data;
         console.log("adherent BY FORMATION",this.Adherent.data);
         
@@ -83,13 +80,13 @@ export class ListeFormationsComponent implements OnInit {
     filtrer(s:string){
       return this.Adherent.filter((el:any)=>el.nom.indexOf(s)!=-1)
     }
-  delete(id:any){
-    this.formationservice.deleteFormation(id).subscribe( data => {   
-    this.affiche()
-    this.router.navigate(['/listeFormations']);  
-    },
-    )
-  }
+ // delete(id:any){
+  //  this.Seance.deleteSeance(id).subscribe( data => {   
+  //  this.affiche()
+//this.router.navigate(['/listeFormations']);  
+   // },
+   // )
+  //}
 
 opensweetalert2() {
   Swal.fire({

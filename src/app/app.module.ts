@@ -16,16 +16,13 @@ import { DashboardResponsableComponent } from './dashboard-responsable/dashboard
 import { InscriptionComponent } from './inscription/inscription.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
 import { SidebarAdminComponent } from './sidebar-admin/sidebar-admin.component';
 import { SidebarResponsableComponent } from './sidebar-responsable/sidebar-responsable.component';
 import { SidebarMembreComponent } from './sidebar-membre/sidebar-membre.component';
 import { NavbarSuppComponent } from './navbar-supp/navbar-supp.component';
-import { ProfilClubComponent } from './profil-club/profil-club.component';
 import { ListeMembresComponent } from './liste-membres/liste-membres.component';
 import { ProfilMembreComponent } from './profil-membre/profil-membre.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { ReservationSalleComponent } from './reservation-salle/reservation-salle.component';
 import { InscriptionResponsableComponent } from './inscription-responsable/inscription-responsable.component';
 import { ListeAutresComponent } from './liste-autres/liste-autres.component';
 import { InfoMembreComponent } from './info-membre/info-membre.component';
@@ -37,6 +34,7 @@ import { ParticipantComponent } from './participant/participant.component';
 import { UpdateFormationComponent } from './update-formation/update-formation.component';
 import { PipePipe } from './pipe.pipe';
 import { SortPipe } from './sort.pipe';
+import { ProfilCoachComponent } from './profil-coach/profil-coach.component';
 
 // import { FullCalendarModule } from '@fullcalendar/angular';
 // import interactionPlugin from '@fullcalendar/interaction';
@@ -55,16 +53,13 @@ import { SortPipe } from './sort.pipe';
     DashboardResponsableComponent,
     LoginComponent,
     NavbarComponent,
-    FooterComponent,
     InscriptionComponent,
     SidebarAdminComponent,
     SidebarResponsableComponent,
     SidebarMembreComponent,
     NavbarSuppComponent,
-    ProfilClubComponent,
     ListeMembresComponent,
     ProfilMembreComponent,
-    ReservationSalleComponent,
     InscriptionResponsableComponent,
     ListeAutresComponent,
     InfoMembreComponent,
@@ -76,6 +71,7 @@ import { SortPipe } from './sort.pipe';
     UpdateFormationComponent,
     PipePipe,
     SortPipe,
+    ProfilCoachComponent,
   ],
   imports: [
     BrowserModule,

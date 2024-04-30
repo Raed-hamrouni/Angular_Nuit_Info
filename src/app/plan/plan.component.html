@@ -12,39 +12,38 @@
                   
                       <thead class="thead-inverse">
                         <tr>
-                          <th>Photo</th>
+                        
                           <th>led by the coach</th>
                           <th style="width: 150px;">Day </th>
-                          <th>Heure
-                            <i class="fa fa-time" aria-hidden="true"></i>
-                          </th>
+                        
                           <th>start time
                             <i class="" aria-hidden="true"></i>
                           </th>
                           <th>end time 
                             <i class="" aria-hidden="true"></i>
                           </th>
-                          <th style="width: 150px;"> place
+                          <th style="width: 150px;"> Join
                             <i class="" aria-hidden="true"></i>
                           </th>
                         </tr>
                       </thead>
                       <tbody>
-                          <tr *ngFor="let formation of Formation | paginate : {itemsPerPage: 2, currentPage: p} " >
-                            <img src="http://localhost:3000/{{formation.file.substring(12)}}"  width="130" height="130" style="margin-left: 30px;" class="img-circle">
-                              <td>{{formation.title}} 
+                          <tr *ngFor="let seance of Seance | paginate : {itemsPerPage: 2, currentPage: p} " >
+                          
+                              <td>{{seance.coach}} 
                                 <br>
-                                <small class="text-muted"> assuré par : {{formation.formateur}}h</small>
+                                <td *ngFor="let responsable of Responsable">{{responsable.coachOf}} 
                               </td>
-                              <td>{{formation.date}}
-                                {{formation.date_fin}}
+                              <td>{{seance.day}}</td>
+                               <td> {{seance.startTime}}</td>
+                          
+                              <td>{{seance.endTime}}
+                             
                               </td>
-                              <td>{{formation.heure}}</td>
-                              <td>{{formation.prix}} DT</td>
-                              <td>{{formation.lieu}}</td>
+                           
                               <td>
                                 <div class="container">
-                                  <button style="margin-left: -20px;" class="btn btn-light" (click)="participer();opensweetalert1();" >
+                                  <button style="margin-left: -20px;" class="btn btn-light" (click)="participer(seance._id);opensweetalert1();" >
                                     <span class="fa fa-star"></span>
                               <strong>Participer</strong>    
                                   </button>

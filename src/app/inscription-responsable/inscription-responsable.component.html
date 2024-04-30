@@ -105,12 +105,12 @@ data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css
                                     <div class="form-group">
                                         <label class="control-label"> Coach Of (*) :</label>
 
-                                        <select  name="nomClub" id="club" class="form-control col-md-12" style="height: 39px;" formControlName="nomClub"
-                                       placeholder="Choisir Votre Club" 
-                                       [ngClass]="{'is-invalid':responsableForm.get('nomClub')!.touched && !responsableForm.get('nomClub')!.valid}">
-                                        <option value="Arsii">Gym Coach</option>
-                                        <option value="Securinets">Fitness Coach</option>
-                                        <option value="Enactus">Personal Trainer</option>
+                                        <select  name="CoachOf" id="club" class="form-control col-md-12" style="height: 39px;" formControlName="CoachOf"
+                                       placeholder="Choisir Votre spécialité de coaching" 
+                                       [ngClass]="{'is-invalid':responsableForm.get('CoachOf')!.touched && !responsableForm.get('CoachOf')!.valid}">
+                                        <option value="Gym Coach">Gym Coach</option>
+                                        <option value="Fitness Coach">Fitness Coach</option>
+                                        <option value="Personal Trainer">Personal Trainer</option>
                                       
                                       
                                         

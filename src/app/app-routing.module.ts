@@ -11,10 +11,8 @@ import { SidebarAdminComponent } from './sidebar-admin/sidebar-admin.component';
 import { SidebarResponsableComponent } from './sidebar-responsable/sidebar-responsable.component';
 import { SidebarMembreComponent } from './sidebar-membre/sidebar-membre.component';
 import { NavbarSuppComponent } from './navbar-supp/navbar-supp.component';
-import { ProfilClubComponent } from './profil-club/profil-club.component';
 import { ListeMembresComponent } from './liste-membres/liste-membres.component';
 import { ProfilMembreComponent } from './profil-membre/profil-membre.component';
-import { ReservationSalleComponent } from './reservation-salle/reservation-salle.component';
 import { InscriptionResponsableComponent } from './inscription-responsable/inscription-responsable.component';
 import { ListeAutresComponent } from './liste-autres/liste-autres.component';
 import { InfoMembreComponent } from './info-membre/info-membre.component';
@@ -24,6 +22,7 @@ import { ListeFormationsComponent } from './liste-formations/liste-formations.co
 import { AjouterFormationComponent } from './ajouter-formation/ajouter-formation.component';
 import { ParticipantComponent } from './participant/participant.component';
 import { UpdateFormationComponent } from './update-formation/update-formation.component';
+import { ProfilCoachComponent } from './profil-coach/profil-coach.component';
 
 const routes: Routes = [
 
@@ -39,10 +38,9 @@ const routes: Routes = [
     { path:'sidebarResponsable',component:SidebarResponsableComponent},
     { path:'sidebarMembre',component:SidebarMembreComponent},
     { path:'navbarSupp',component:NavbarSuppComponent},
-    { path:'profilClub',component:ProfilClubComponent},
+    { path:'profilCoach',component:ProfilCoachComponent},
     { path:'listeMembre',component:ListeMembresComponent},
     { path:'profil-membre/:id',component:ProfilMembreComponent},
-    { path:'reservation',component:ReservationSalleComponent},
     { path:'inscriptionResp',component:InscriptionResponsableComponent},
     { path:'listeAutresResp',component:ListeAutresComponent},
     { path:'infoMembre/:id',component:InfoMembreComponent},
@@ -52,7 +50,7 @@ const routes: Routes = [
     { path:'AjoutEvent',component:AjouterFormationComponent},
     { path:'Participant/:id',component:ParticipantComponent},
     { path:'updateFormation/:id',component:UpdateFormationComponent},
-
+  
 
 
 

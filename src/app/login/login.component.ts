@@ -61,7 +61,7 @@ login() {
     if(res.admin.role=="responsable"){
       this.authServ.Login(res.admin,res.token);
     localStorage.setItem('CurrentUser', res.admin._id)
-    this.router.navigate(["/espaceResponsable"]);
+    this.router.navigate(["/profilCoach"]);
 
     }
     
@@ -84,7 +84,7 @@ login() {
 
     this.authServ.Login(res.admin.role,res.token);
     localStorage.setItem('CurrentUser', res.admin._id)}
-    else { this.router.navigate(["/espaceResponsable"]);
+    else { this.router.navigate(["/profilCoach"]);
     this.authServ.Login(res.admin,res.token);
     localStorage.setItem('CurrentUser', res.admin._id)}
    

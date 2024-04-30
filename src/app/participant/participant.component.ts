@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Params, Router, RouterLink } from '@angular/router';
-import { FormationService } from '../shared/formation.service';
+import { SeanceService } from '../shared/seance.service';
 import { FormBuilder, FormGroup,Validators } from '@angular/forms';
 import { AdherentService } from '../shared/adherent.service';
 @Component({
@@ -16,7 +16,7 @@ export class ParticipantComponent implements OnInit {
   _id:any
   _idEvent:any
   constructor(private router:Router ,
-    private formationServ: FormationService,
+    private seanceServ: SeanceService,
     private fb: FormBuilder,
     private adhServ: AdherentService,
     private ar:ActivatedRoute
@@ -30,9 +30,9 @@ export class ParticipantComponent implements OnInit {
  
 }
 getList(_id:number){
-  this.adhServ.getAdherentByFormation(this.idEvent).subscribe((data:any)=>{
+  this.adhServ.getAdherentBySeance(this.idEvent).subscribe((data:any)=>{
     this.Adherent = data;
-    console.log("adherent BY FORMATION",this.Adherent);
+    console.log("adherent BY SEANCE",this.Adherent);
     
   }) 
 }

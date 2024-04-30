@@ -1,35 +1,35 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Formation } from '../Model/formation';
+import { Injectable } from '@angular/core';
+import { Seance } from '../Model/seance';
+
 @Injectable({
   providedIn: 'root'
 })
-export class FormationService {
-  path="http://localhost:3000/formation";
+export class SeanceService {
+  path="http://localhost:3000/seance";
 
   constructor(private http: HttpClient) { }
-  
-  createFormation(data:any) {
+  createSeance(data:any) {
     return this.http.post(this.path+"/",data) 
   }
 
-  getAllFormation(){
+  getAllSeance(){
     return this.http.get(this.path+"/");
   }
 
-  deleteFormation(id:any) {
+  deleteSeance(id:any) {
     return this.http.delete(this.path+"/"+ id);
   }
   uploadFile(data:any) {
     return this.http.post(this.path+"/upload",data) 
    
    }
-  getFormation(id: number) {
+  getSeance(id: number) {
     return this.http.get(this.path+"/"+ id);
   }
 
-  updateFormation(id:number,formation: Formation){
-    return this.http.put(this.path+"/"+id,formation);
+  updateSeance(id:number,seance: Seance){
+    return this.http.put(this.path+"/"+id,seance);
   }
 
 }

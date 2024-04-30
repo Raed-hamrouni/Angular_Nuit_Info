@@ -18,10 +18,14 @@ export class InfoMembreComponent implements OnInit {
     private adhServ: AdherentService ,
     private authServ: AuthService) { }
     ngOnInit(): void {
+      console.log("hello")
       this. id =(localStorage.getItem('CurrentUser') || '');
       this.adhServ.getAdherent(this.id).subscribe( data => {
         console.log(data);
+        console.log("user identified");
         this.Adherent = data;
+        
+        
       })
     }
   

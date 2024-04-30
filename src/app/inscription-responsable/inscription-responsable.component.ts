@@ -27,13 +27,9 @@ export class InscriptionResponsableComponent implements OnInit {
         emailEnt:['',Validators.required],
         password:['',Validators.required],
         nomR:['',[Validators.required,Validators.minLength(3)]],
-        nomClub:['',[Validators.required,Validators.minLength(3)]],
+        CoachOf:['',Validators.required],
         telEnt:['',Validators.required],
-        cycleR:['',Validators.required],
-        niveauR:['',Validators.required],
-        specialiteR:['',Validators.required],
-        file:['',Validators.required],
-
+    
 
       }
 
