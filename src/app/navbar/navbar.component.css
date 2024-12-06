@@ -1,5 +1,5 @@
 .custom-navbar {
-    background-color: #747070; /* Updated background color */
+    background-color: #b1c5b4; 
     padding: 10px 20px;
 }
 
@@ -31,11 +31,11 @@
     border-radius: 4px;
     text-decoration: none;
     color: #fff;
-    background-color: #096509; /* Updated button background color */
+    background-color: #096509; 
     border: none;
     transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #0e151d; /* Darker shade on hover */
+    background-color: #0e151d; 
 }

@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
-import { AdminService } from '../shared/admin.service';
-import { AuthService } from '../shared/auth.service';
-import { AdherentService } from '../shared/adherent.service';
-import { ResponsableService } from '../shared/responsable.service';
+import { AuthService } from '../services/auth.service';
+import { ResponsableService } from '../services/responsable.service';
 
 @Component({
   selector: 'app-dashboard-responsable',
@@ -16,11 +12,7 @@ export class DashboardResponsableComponent implements OnInit {
   id:any;
   Responsable!: any;
   constructor(
-    private router:Router, 
-    private fb: FormBuilder,
-    private adminServ: AdminService,
     private authServ: AuthService,
-    private adhServ: AdherentService,
     private responsableService: ResponsableService
   ) { }
 

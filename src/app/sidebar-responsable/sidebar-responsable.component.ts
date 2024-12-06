@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { ResponsableService } from '../shared/responsable.service';
-import { AuthService } from '../shared/auth.service';
+import { ResponsableService } from '../services/responsable.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-sidebar-responsable',
@@ -11,15 +9,11 @@ import { AuthService } from '../shared/auth.service';
 })
 export class SidebarResponsableComponent implements OnInit {
   id:any;
-  closeResult = '';
   Responsable!:any;
+
     constructor(
-      private router:Router, 
-      private fb: FormBuilder,
       private responsableService: ResponsableService,
       private authServ: AuthService,
-      private route: ActivatedRoute,
-  
     ) { }
   
     ngOnInit(): void  {
@@ -29,7 +23,7 @@ export class SidebarResponsableComponent implements OnInit {
       
       
       this.responsableService.getResponsable(this.id).subscribe( data => {
-        // console.log(data);  
+        //console.log(data);  
         this.Responsable = data;
       })}
   

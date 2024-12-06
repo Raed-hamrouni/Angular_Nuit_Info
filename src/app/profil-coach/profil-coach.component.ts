@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
-import { AdminService } from '../shared/admin.service';
-import { AuthService } from '../shared/auth.service';
-import { AdherentService } from '../shared/adherent.service';
-import { ResponsableService } from '../shared/responsable.service';
+import { ResponsableService } from '../services/responsable.service';
 
 @Component({
   selector: 'app-profil-coach',
@@ -16,11 +11,6 @@ export class ProfilCoachComponent implements OnInit {
   id:any;
 
   constructor(
-    private router:Router, 
-    private fb: FormBuilder,
-    private adminServ: AdminService,
-    private authServ: AuthService,
-    private adhServ: AdherentService,
     private responsableService: ResponsableService
   ) { }
 

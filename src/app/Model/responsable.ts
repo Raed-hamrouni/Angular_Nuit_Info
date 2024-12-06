@@ -1,4 +1,5 @@
 export interface Responsable {
+    
     id:number;
     emailEnt:string;
     password:string;

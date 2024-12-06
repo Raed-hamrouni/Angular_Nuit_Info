@@ -1,27 +1,16 @@
 
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <div class="input-group" *ngFor="let item of Adherent ; let i=index">
+      <div class="data">
+        <h3><i class="fa fa-check-square-o" aria-hidden="true" style="color:#25857e"></i>
+          {{item[i].nom}} {{item[i].prenom}} <br> </h3>
+          <h5> </h5>
 
-   <div class="modal-header"  style="background-color: #25857e;" >
-    <a href="" class="logo" style="font-size: 1px;" style="margin-top: 0px;">
-     
-      
-</a>
-    <h4 class="modal-title" id="modal-basic-title" style="margin-left: 20px;">Liste des Participants</h4>
-  </div>
-  <div class="modal-body" style="width: 90px;">
-    <form >
-      <div class="mb-6">
- 
-        <div class="input-group" *ngFor="let item of Adherent ; let i=index">
-          <div class="data" style="margin-left: 20px;">
-            <h3><i class="fa fa-check-square-o" aria-hidden="true" style="color:#25857e"></i>
-              {{Adherent[i].nom}} {{Adherent[i].prenom}} <br> </h3>
-              <h5> </h5>
-
-        </div>
-        </div>
-      </div>
-    
-    </form>
+    </div>
+    </div>
   </div>
 
- 
+
+
+

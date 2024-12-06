@@ -5,7 +5,7 @@
 <div class="wrapper">
     <div class="left"> 
 
-       <img src="http://localhost:3000/{{Adherent.file.substring(12)}}" alt="user" width="150" class="" > 
+       <img src="assets/adherent.png" alt="user" width="150" class="" > 
       <br>
       <br>
       <h4>{{Adherent.prenom | uppercase}} {{Adherent.nom | uppercase}}  </h4>
@@ -16,18 +16,18 @@
     <div class="right">
   
       <div class="info">
-            <h3> Informations de Contact</h3>
+            <h3> Contact Informations </h3>
         <div class="info_data">
           <div class="data">
-            <h4>Civilité</h4>
+            <h4>Civility</h4>
             <p> {{Adherent.civilite}}</p>
           </div>
               <div class="data">
-                <h4>Nom</h4>
+                <h4>First Name</h4>
                 <p> {{Adherent.prenom}}</p>
             </div>
             <div class="data">
-              <h4>Prénom</h4>
+              <h4>Last Name</h4>
               <p> {{Adherent.nom}}</p>
           </div> 
       </div>
@@ -37,7 +37,7 @@
           <p> {{Adherent.email}}</p>
         </div>
         <div class="data">
-          <h4>Numéro Téléphone</h4>
+          <h4>Phone number</h4>
           <p> {{Adherent.telephone}}</p>
       </div>
       </div>

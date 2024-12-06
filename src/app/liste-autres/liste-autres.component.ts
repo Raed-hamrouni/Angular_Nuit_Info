@@ -1,14 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ResponsableService } from '../shared/responsable.service';
-import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
-interface responsable {
-  id:number;
-  nom:string;
-  prenom:string;
-  email:string;
+import { ResponsableService } from '../services/responsable.service';
 
-}
+
 @Component({
   selector: 'app-liste-autres',
   templateUrl: './liste-autres.component.html',
@@ -17,15 +10,10 @@ interface responsable {
 export class ListeAutresComponent implements OnInit {
 
   p : number=1;
-  router: any;
   id:any;
   responsable:any;
   Responsable!:any;
-  term!: string;
-  searchTerm!: string;
-  constructor( private responsableService: ResponsableService,
-    private route : ActivatedRoute,
-    private http: HttpClient,) { }
+  constructor( private responsableService: ResponsableService) { }
 
   ngOnInit(): void {
     this.affiche()

@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AdherentService } from '../shared/adherent.service';
-import { AuthService } from '../shared/auth.service';
+import { AdherentService } from '../services/adherent.service';
+import { AuthService } from '../services/auth.service';
 import { HttpClient } from '@angular/common/http';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 interface Adhérent {
@@ -21,29 +19,15 @@ interface Adhérent {
 export class ListeMembresComponent implements OnInit {
   router: any;
   id:any;
-  filterAdherent:any;
   p : number=1;
-  term!: string;
   adherent: any;
-  nom:any
-  _id:any
-  prenom:any
-  niveau:any
-  cycle:any
   form:any
-  etablissement:any
-  searchTerm!: string;
   Adherent!: any;
-  Admin!: any;
-  closeResult = '';
-  updateform!: FormGroup
-
 
   constructor( private adhServ: AdherentService,
     private authServ: AuthService,
     private http: HttpClient,
-    private fb: FormBuilder,
-    private route: Router) 
+ ) 
     { }
 
   ngOnInit(): void {
@@ -65,11 +49,7 @@ export class ListeMembresComponent implements OnInit {
   affiche(){
     this.adhServ.getAllAdherent().subscribe(
       (res:any)=>{
-      //lena 5ater res feha kol chay m5alta ( adherent/ rh/ ...) donc star hedha ya3mel filtration bel role adherent
-      this.Adherent=res.filter((item:any) => item.role=="Adherent")
-
-      console.log(this.filterAdherent);
-    
+      this.Adherent=res.filter((item:any) => item.role=="Adherent")  
       },
     )
   }
@@ -77,9 +57,8 @@ export class ListeMembresComponent implements OnInit {
  
 
   delete(id:any){
-    // this.opensweetalert1()
     this.adhServ.deleteAdherent(id).subscribe( data => {   
-      this.opensweetalert2()
+      this.opensweetalert1()
     this.affiche()
     this.router.navigate(['/liste-membres']);  
     },
@@ -87,20 +66,12 @@ export class ListeMembresComponent implements OnInit {
   }
 
  
-  update(){
-      
-    this.adhServ.updateAdherent(this.id,this.Adherent).subscribe( data => {
-      this.affiche()
-      // this.toastr.success(" modifiée avec succès")
-     this.router.navigate(['/liste-membres']);
-    },(error)=>{
-      console.log(error);
-    });
- }
+
 
   logout(){
     this.authServ.logout()
   }
+
   opensweetalert1(){
   Swal.fire({
     title: 'Êtes-vous sûr de vouloir supprimer ceci?',

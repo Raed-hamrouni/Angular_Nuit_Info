@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
-import { SeanceService } from '../shared/seance.service';
-import { AdherentService } from '../shared/adherent.service';
+import { SeanceService } from '../services/seance.service';
+import { AdherentService } from '../services/adherent.service';
 import Swal from 'sweetalert2';
-import { ResponsableService } from '../shared/responsable.service';
+import { ResponsableService } from '../services/responsable.service';
 
 @Component({
   selector: 'app-plan',
@@ -15,25 +12,17 @@ import { ResponsableService } from '../shared/responsable.service';
 export class PlanComponent implements OnInit {
   Seance!: any;
   Adherent!: any;
-  router: any;
   id:any;
   _id:any;
   p : number=1;
-  ida:any
   idEvent:any;
   _idEvent:any;
   event:any;
   Responsable!: any;
-  adherent_id:any;
   seance_id:any;
   seance:any;
 
-  constructor( private adhServ: AdherentService,
-    private responsableService: ResponsableService,
-    private seanceservice: SeanceService,
-    private http: HttpClient,
-    private fb: FormBuilder,
-    private route: Router) 
+  constructor( private adhServ: AdherentService, private responsableService: ResponsableService, private seanceservice: SeanceService,) 
     { }
 
   ngOnInit(): void {
@@ -94,7 +83,7 @@ export class PlanComponent implements OnInit {
     Swal.fire({
       position: 'top-end',
       icon: 'success',
-      title: 'Formation Ajoutée avec Succès',
+      title: 'Seance Ajoutée avec Succès',
       showConfirmButton: false,
       timer: 2000
     })

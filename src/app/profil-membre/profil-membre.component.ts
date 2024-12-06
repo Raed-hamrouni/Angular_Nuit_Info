@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AdherentService } from '../shared/adherent.service';
+import { AdherentService } from '../services/adherent.service';
 
 @Component({
   selector: 'app-profil-membre',

@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Adhérent } from '../Model/adhérent';
-import { AdherentService } from '../shared/adherent.service';
-import { AuthService } from '../shared/auth.service';
+import { AdherentService } from '../services/adherent.service';
+import { AuthService } from '../services/auth.service';
 import Swal from 'sweetalert2';
 @Component({
   selector: 'app-update-adherent',
@@ -14,7 +14,6 @@ export class UpdateAdherentComponent implements OnInit {
   adherentForm!: FormGroup
   id:any;
   adherent: any;
-
   Adherent!: any;
 
 
@@ -51,7 +50,7 @@ export class UpdateAdherentComponent implements OnInit {
   update(){
       
     this.adhServ.updateAdherent(this.id,this.Adherent).subscribe( data => {
-      // this.toastr.success("Adhérent Modifié avec succès")
+      
      this.router.navigate(['/infoMembre',this.id]);
     },(error)=>{
       console.log(error);

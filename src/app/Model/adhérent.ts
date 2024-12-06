@@ -6,7 +6,4 @@ export interface Adhérent {
     nom:string;
     prenom:string;
     telephone:string;
-    file:string;
-  
-
 }

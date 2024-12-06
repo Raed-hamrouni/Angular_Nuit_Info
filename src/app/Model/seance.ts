@@ -1,4 +1,5 @@
 export interface Seance {
+    
     id:number;
     day:string;
     startTime:string;
